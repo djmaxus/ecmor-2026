@@ -1,0 +1,3845 @@
+
+
+
+ ########  #          ######   #           #
+ #         #         #      #   #         #
+ #####     #         #      #    #   #   #
+ #         #         #      #     # # # #
+ #         #######    ######       #   #
+
+Flow is a simulator for fully implicit three-phase black-oil flow, and is part of OPM.
+For more information visit: https://opm-project.org
+
+Flow Version     =  2026.04-pre (bf0fd3faf)
+Machine name     =  [REDACTED] (Number of logical cores: 72, Memory size: 63779.43 MB)
+Operating system =  Linux x86_64 (Kernel: 6.6.87.2-microsoft-standard-WSL2, #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 )
+Build time       =  2026-01-28 at 12:12:18 hrs
+Simulation started on 03-07-2026 at 16:10:58 hrs
+Using 16 MPI processes with 2 OMP threads on each
+Parameters used by Flow:
+# [known parameters which were specified at run-time]
+EnableTuning="1" # default: "0"
+OutputDir="./out" # default: ""
+EclDeckFileName="mip.data" # default: ""
+# [parameters which were specified at compile-time]
+AcceleratorMode="none"
+ActionParsingStrictness="normal"
+AddCorners="0"
+AllowDistributedWells="0"
+AllowSplittingInactiveWells="1"
+AlternativeWellRateInit="1"
+CheckGroupConstraintsInnerWellIterations="1"
+CheckSatfuncConsistency="1"
+ConserveInnerEnergyThermal="0"
+ContinueOnConvergenceError="0"
+ConvergenceMonitoring="0"
+ConvergenceMonitoringCutOff="6"
+ConvergenceMonitoringDecayFactor="0.75"
+CprReuseInterval="30"
+CprReuseSetup="4"
+CprWeightsThreadParallel="0"
+DbhpMaxRel="1"
+DebugEmitCellPartition="0"
+DebugVerbosityLevel="1"
+DpMaxRel="0.3"
+DsMax="0.2"
+DwellFractionMax="0.2"
+EclOutputDoublePrecision="0"
+EclOutputInterval="-1"
+EdgeConformal="0"
+EdgeWeightsMethod="transmissibility"
+EnableAdaptiveTimeStepping="1"
+EnableAsyncEclOutput="1"
+EnableAsyncVtkOutput="1"
+EnableDriftCompensation="0"
+EnableDriftCompensationTemp="1"
+EnableDryRun="auto"
+EnableEclOutput="1"
+EnableEsmry="1"
+EnableGravity="1"
+EnableGridAdaptation="0"
+EnableIntensiveQuantityCache="1"
+EnableLoggingFalloutWarning="0"
+EnableOpmRstFile="0"
+EnableStorageCache="1"
+EnableTerminalOutput="1"
+EnableThermodynamicHints="0"
+EnableVtkOutput="0"
+EnableWellOperabilityCheck="1"
+EnableWellOperabilityCheckIter="0"
+EnableWriteAllSolutions="0"
+EndTime="1e+100"
+ExplicitRockCompaction="0"
+ExternalPartition=""
+ForceDisableFluidInPlaceOutput="0"
+ForceDisableResvFluidInPlaceOutput="0"
+FullTimeStepInitially="0"
+GpuAwareMpi="0"
+GpuDeviceId="0"
+HybridNewtonConfigFile="hybridNewtonConfig.json"
+IgnoreKeywords=""
+IluFillinLevel="0"
+IluRedblack="0"
+IluRelaxation="0.9"
+IluReorderSpheres="0"
+ImbalanceTol="1.1"
+InitialTimeStepInDays="1"
+InitialTimeStepSize="86400"
+InjMultDampMult="0.9"
+InjMultMinDampFactor="0.05"
+InjMultOscThreshold="0.1"
+InputSkipMode="100"
+LinearSolver="cprw"
+LinearSolverAccelerator="cpu"
+LinearSolverIgnoreConvergenceFailure="0"
+LinearSolverMaxIter="200"
+LinearSolverPrintJsonDefinition="1"
+LinearSolverReduction="0.01"
+LinearSolverRestart="40"
+LinearSolverVerbosity="0"
+LoadFile=""
+LoadStep="-1"
+LocalDomainsOrderingMeasure="maxpressure"
+LocalDomainsPartitionWellNeighborLevels="1"
+LocalDomainsPartitioningImbalance="1.03"
+LocalDomainsPartitioningMethod="zoltan"
+LocalSolveApproach="gauss-seidel"
+LocalToleranceScalingCnv="0.1"
+LocalToleranceScalingMb="1"
+LocalWellSolveControlSwitching="1"
+MatrixAddWellContributions="0"
+MaxInnerIterMsWells="100"
+MaxInnerIterWells="50"
+MaxLocalSolveIterations="20"
+MaxNewtonIterationsWithInnerWellIterations="99"
+MaxPressureChangeMsWells="1e+06"
+MaxResidualAllowed="1e+07"
+MaxSinglePrecisionDays="20"
+MaxTemperatureChange="5"
+MaxTimeStepDivisions="10"
+MaxTimeStepSize="inf"
+MaxWellStatusSwitchForWells="99"
+MaxWellStatusSwitchInInnerIterWells="99"
+MaxWelleqIter="30"
+MaximumNumberOfGroupSwitches="3"
+MaximumNumberOfWellSwitches="3"
+MaximumWaterSaturation="1"
+MetisParams="default"
+MiluVariant="ilu"
+MinStrictCnvIter="-1"
+MinStrictMbIter="-1"
+MinTimeStepBasedOnNewtonIterations="0"
+MinTimeStepBeforeShuttingProblematicWellsInDays="0.01"
+MinTimeStepSize="0"
+NetworkMaxOuterIterations="10"
+NetworkMaxPressureUpdateInBars="5"
+NetworkMaxStrictOuterIterations="10"
+NetworkMaxSubIterations="20"
+NetworkPressureUpdateDampingFactor="0.1"
+NewtonMaxError="1e+100"
+NewtonMaxIterations="20"
+NewtonMaxRelax="0.5"
+NewtonMinIterations="2"
+NewtonRelaxationType="dampen"
+NewtonTargetIterations="10"
+NewtonTolerance="0.01"
+NewtonVerbose="1"
+NewtonWriteConvergence="0"
+NlddLocalLinearSolver="ilu0"
+NlddLocalLinearSolverMaxIter="200"
+NlddLocalLinearSolverReduction="0.01"
+NlddNumInitialNewtonIter="1"
+NlddRelativeMobilityChangeTol="0.1"
+NonlinearSolver="newton"
+NumLocalDomains="0"
+NumOverlap="1"
+NumPressurePointsEquil="2000"
+NumSatfuncConsistencySamplePoints="5"
+NupcolGroupRateTolerance="0.001"
+OpenclIluParallel="1"
+OpenclPlatformId="0"
+OutputExtraConvergenceInfo="none"
+OutputInterval="1"
+OutputMode="all"
+OwnerCellsFirst="1"
+ParameterFile=""
+ParsingStrictness="normal"
+PartitionMethod="zoltanwell"
+PreSolveNetwork="1"
+PredeterminedTimeStepsFile=""
+PressureMax="1e+99"
+PressureMin="-1e+99"
+PressureScale="1"
+PriVarOscilationThreshold="1e-05"
+PrintParameters="2"
+ProjectSaturations="0"
+RegularizationFactorWells="100"
+RelaxedLinearSolverReduction="0.01"
+RelaxedMaxPvFraction="0.03"
+RelaxedPressureTolMsw="10000"
+RelaxedWellFlowTol="0.001"
+RestartTime="-1e+35"
+RestartWritingInterval="16777215"
+SaveFile=""
+SaveStep=""
+ScaleLinearSystem="0"
+SchedRestart="0"
+SerialPartitioning="0"
+ShutUnsolvableWells="1"
+Slave="0"
+SolveWelleqInitially="1"
+SolverContinueOnConvergenceFailure="0"
+SolverGrowthFactor="2"
+SolverMaxGrowth="3"
+SolverMaxRestarts="10"
+SolverMaxTimeStepInDays="365"
+SolverMinTimeStep="1e-12"
+SolverRestartFactor="0.33"
+SolverVerbosity="1"
+StrictInnerIterWells="40"
+StrictOuterIterWells="6"
+TemperatureMax="1e+09"
+TemperatureMin="0"
+ThreadsPerProcess="2"
+TimeStepAfterEventInDays="-1"
+TimeStepControl="pid+newtoniteration"
+TimeStepControlDecayDampingFactor="1"
+TimeStepControlDecayRate="0.75"
+TimeStepControlFileName="timesteps"
+TimeStepControlGrowthDampingFactor="3.2"
+TimeStepControlGrowthRate="1.25"
+TimeStepControlMaxReductionTimeStep="0.1"
+TimeStepControlParameters="0.125;0.25;0.125;0.75;0.25"
+TimeStepControlRejectCompletedStep="0"
+TimeStepControlSafetyFactor="0.8"
+TimeStepControlTargetIterations="30"
+TimeStepControlTargetNewtonIterations="8"
+TimeStepControlTolerance="0.1"
+TimeStepControlToleranceTestVersion="standard"
+TimeStepVerbosity="1"
+ToleranceCnv="0.01"
+ToleranceCnvEnergy="0.4182"
+ToleranceCnvEnergyRelaxed="41.82"
+ToleranceCnvRelaxed="1"
+ToleranceEnergyBalance="4.182e-06"
+ToleranceEnergyBalanceRelaxed="4.182e-05"
+ToleranceMaxDp="0"
+ToleranceMaxDrs="0"
+ToleranceMaxDrv="0"
+ToleranceMaxDs="0"
+ToleranceMb="1e-07"
+ToleranceMbRelaxed="1e-06"
+TolerancePressureMsWells="1000"
+ToleranceWellControl="1e-07"
+ToleranceWells="0.0001"
+UpdateEquationsScaling="0"
+UseAverageDensityMsWells="0"
+UseGmres="0"
+UseHybridNewton="0"
+UseImplicitIpr="1"
+UseMultisegmentWell="1"
+UseUpdateStabilization="1"
+VerifyGpuAwareMpi="0"
+VtkWriteAverageMolarMasses="0"
+VtkWriteDensities="1"
+VtkWriteDiffusionCoefficients="0"
+VtkWriteDofIndex="0"
+VtkWriteEffectiveDiffusionCoefficients="0"
+VtkWriteExtrusionFactor="0"
+VtkWriteFilterVelocities="0"
+VtkWriteFugacities="0"
+VtkWriteFugacityCoeffs="0"
+VtkWriteGasDissolutionFactor="0"
+VtkWriteGasFormationVolumeFactor="0"
+VtkWriteGasSaturationPressure="0"
+VtkWriteIntrinsicPermeabilities="0"
+VtkWriteMassFractions="0"
+VtkWriteMobilities="0"
+VtkWriteMolarities="0"
+VtkWriteMoleFractions="1"
+VtkWriteOilFormationVolumeFactor="0"
+VtkWriteOilSaturationPressure="0"
+VtkWriteOilVaporizationFactor="0"
+VtkWritePorosity="1"
+VtkWritePotentialGradients="0"
+VtkWritePressures="1"
+VtkWritePrimaryVars="0"
+VtkWritePrimaryVarsMeaning="0"
+VtkWriteProcessRank="0"
+VtkWriteRelativePermeabilities="1"
+VtkWriteSaturatedGasOilVaporizationFactor="0"
+VtkWriteSaturatedOilGasDissolutionFactor="0"
+VtkWriteSaturationRatios="0"
+VtkWriteSaturations="1"
+VtkWriteTemperature="1"
+VtkWriteTortuosities="0"
+VtkWriteTotalMassFractions="0"
+VtkWriteTotalMoleFractions="0"
+VtkWriteTracerConcentration="0"
+VtkWriteViscosities="0"
+VtkWriteWaterFormationVolumeFactor="0"
+WaterOnlyThreshold="1"
+WellGroupConstraintsMaxIterations="1"
+ZoltanImbalanceTol="1.1"
+ZoltanParams="graph"
+ZoltanPhgEdgeSizeThreshold="0.35"
+
+Reading deck file 'mip.data'
+    0 Reading RUNSPEC  in mip.data line 1
+    1 Reading WELLDIMS in ecmor-2026/common/RUNSPEC.inc line 1
+    2 Reading START    in ecmor-2026/common/RUNSPEC.inc line 4
+    3 Reading METRIC   in ecmor-2026/common/RUNSPEC.inc line 7
+    4 Reading EQLDIMS  in ecmor-2026/common/RUNSPEC.inc line 9
+    5 Reading CO2STORE in ecmor-2026/common/RUNSPEC.inc line 12
+    6 Reading GAS      in ecmor-2026/common/RUNSPEC.inc line 13
+    7 Reading WATER    in ecmor-2026/common/RUNSPEC.inc line 14
+    8 Reading UNIFOUT  in ecmor-2026/common/RUNSPEC.inc line 16
+    9 Reading ENDSCALE in ecmor-2026/common/RUNSPEC.inc line 18
+   10 Reading DIMENS   in ecmor-2026/coarse/DIMENS.inc line 1
+   11 Reading TABDIMS  in ecmor-2026/mip/TABDIMS.inc line 1
+   12 Reading ENDSCALE in mip.data line 12
+   13 Reading GRID     in mip.data line 15
+   14 Reading INIT     in ecmor-2026/coarse/GRID.inc line 1
+   15 Reading PERMX    in ecmor-2026/coarse/CPERMX.INC line 2
+   16 Reading PERMY    in ecmor-2026/coarse/CPERMY.INC line 2
+   17 Reading PERMZ    in ecmor-2026/coarse/CPERMZ.INC line 2
+   18 Reading PORO     in ecmor-2026/coarse/CPORO.INC line 2
+   19 Reading COORD    in ecmor-2026/coarse/CGRID.INC line 3
+   20 Reading ZCORN    in ecmor-2026/coarse/CGRID.INC line 5
+   21 Reading ACTNUM   in ecmor-2026/coarse/CGRID.INC line 7
+   22 Reading FLUXNUM  in ecmor-2026/coarse/CFLUXNUM.INC line 2
+   23 Reading MAPAXES  in ecmor-2026/common/MAPAXES.inc line 1
+   24 Reading JFUNC    in ecmor-2026/mip/JFUNC.inc line 1
+   25 Reading EDIT     in mip.data line 26
+   26 Reading PORV     in ecmor-2026/coarse/CPORV.INC line 2
+   27 Reading TRANX    in ecmor-2026/coarse/CTRANX.INC line 2
+   28 Reading TRANY    in ecmor-2026/coarse/CTRANY.INC line 2
+   29 Reading TRANZ    in ecmor-2026/coarse/CTRANZ.INC line 2
+   30 Reading EDITNNC  in ecmor-2026/coarse/CEDITNNC.INC line 2
+   31 Reading PROPS    in mip.data line 31
+   32 Reading SALINITY in ecmor-2026/common/PROPS.inc line 1
+   33 Reading ROCK     in ecmor-2026/common/PROPS.inc line 4
+   34 Reading SGWFN    in ecmor-2026/mip/SGWFN.inc line 1
+   35 Reading REGIONS  in mip.data line 39
+   36 Reading FIPNUM   in ecmor-2026/coarse/CFIPNUM.INC line 2
+   37 Reading KRNUMX   in ecmor-2026/mip/KRNUMX.inc line 1
+   38 Reading KRNUMY   in ecmor-2026/mip/KRNUMY.inc line 1
+   39 Reading KRNUMZ   in ecmor-2026/mip/KRNUMZ.inc line 1
+   40 Reading FIPMIP   in ecmor-2026/mip/FIPMIP.inc line 1
+   41 Reading SOLUTION in mip.data line 56
+   42 Reading EQUIL    in ecmor-2026/common/SOLUTION.inc line 1
+   43 Reading RPTRST   in ecmor-2026/common/SOLUTION.inc line 4
+   44 Reading RTEMPVD  in ecmor-2026/common/SOLUTION.inc line 7
+   45 Reading SUMMARY  in mip.data line 61
+   46 Reading PERFORMA in ecmor-2026/common/SUMMARY.inc line 1
+   47 Reading RPR      in ecmor-2026/common/SUMMARY.inc line 2
+   48 Reading RPRP     in ecmor-2026/common/SUMMARY.inc line 4
+   49 Reading RGMDS    in ecmor-2026/common/SUMMARY.inc line 6
+   50 Reading RGMIP    in ecmor-2026/common/SUMMARY.inc line 8
+   51 Reading FPR      in ecmor-2026/common/SUMMARY.inc line 10
+   52 Reading FPRP     in ecmor-2026/common/SUMMARY.inc line 11
+   53 Reading FGMIP    in ecmor-2026/common/SUMMARY.inc line 12
+   54 Reading FGMDS    in ecmor-2026/common/SUMMARY.inc line 13
+   55 Reading FGMIR    in ecmor-2026/common/SUMMARY.inc line 14
+   56 Reading FGMIT    in ecmor-2026/common/SUMMARY.inc line 15
+   57 Reading WGMIR    in ecmor-2026/common/SUMMARY.inc line 16
+   58 Reading WGMIT    in ecmor-2026/common/SUMMARY.inc line 18
+   59 Reading WBHP     in ecmor-2026/common/SUMMARY.inc line 20
+   60 Reading FWCD     in ecmor-2026/common/SUMMARY.inc line 23
+   61 Reading BWCD     in ecmor-2026/common/SUMMARY.inc line 26
+   62 Reading SCHEDULE in mip.data line 66
+   63 Reading WELSPECS in ecmor-2026/common/WELLSPECS.inc line 1
+   64 Reading COMPDAT  in ecmor-2026/coarse/COMPDAT.inc line 1
+   65 Reading WCONINJE in ecmor-2026/common/SCHEDULE.inc line 1
+   66 Reading TUNING   in ecmor-2026/common/SCHEDULE.inc line 19
+   67 Reading TSTEP    in ecmor-2026/common/SCHEDULE.inc line 24
+   68 Reading TSTEP    in ecmor-2026/common/SCHEDULE.inc line 28
+   69 Reading TUNING   in ecmor-2026/common/SCHEDULE.inc line 32
+   70 Reading DATES    in ecmor-2026/common/SCHEDULE.inc line 37
+   71 Reading WCONINJE in ecmor-2026/common/SCHEDULE.inc line 65
+   72 Reading TUNING   in ecmor-2026/common/SCHEDULE.inc line 82
+   73 Reading DATES    in ecmor-2026/common/SCHEDULE.inc line 87
+
+The CO2 storage option is given. PVT properties from the Brine-CO2 system are used.
+See the OPM manual for details on the used models.
+
+Creating corner-point grid from keywords COORD, ZCORN and others
+2 fluid phases are active
+
+Processing dynamic information from
+mip.data line 66
+Initializing report step 0/68 at 2024-01-01 0 DAYS line 66
+Reading from: ecmor-2026/common/WELLSPECS.inc line 1
+Processing keyword WELSPECS at line 1
+Reading from: ecmor-2026/coarse/COMPDAT.inc line 1
+Processing keyword COMPDAT at line 1
+
+Warning: Problem with COMPDAT keyword
+In ecmor-2026/coarse/COMPDAT.inc line 1
+The cell (99,104,1) in well INJ04 is not active and the connection will be ignored
+
+Warning: Problem with COMPDAT keyword
+In ecmor-2026/coarse/COMPDAT.inc line 1
+The cell (102,81,1) in well INJ05 is not active and the connection will be ignored
+
+Warning: Problem with COMPDAT keyword
+In ecmor-2026/coarse/COMPDAT.inc line 1
+The cell (129,48,1) in well INJ11 is not active and the connection will be ignored
+Reading from: ecmor-2026/common/SCHEDULE.inc line 1
+Processing keyword WCONINJE at line 1
+Processing keyword TUNING at line 19
+Complete report step 1 (1 DAYS) at 2024-01-02 (0 DAYS)
+
+Initializing report step 2/68 at 2024-01-02 (0 DAYS) line 24
+Complete report step 2 (2 DAYS) at 2024-01-04 (1 DAYS)
+
+Initializing report step 3/68 at 2024-01-04 (1 DAYS) line 24
+Complete report step 3 (5 DAYS) at 2024-01-09 (3 DAYS)
+
+Initializing report step 4/68 at 2024-01-09 (3 DAYS) line 24
+Complete report step 4 (10 DAYS) at 2024-01-19 (8 DAYS)
+
+Initializing report step 5/68 at 2024-01-19 (8 DAYS) line 24
+Complete report step 5 (10 DAYS) at 2024-01-29 (18 DAYS)
+Report limit reached, see PRT-file for remaining Schedule initialization.
+
+Initializing report step 6/68 at 2024-01-29 (18 DAYS) line 28
+Complete report step 6 (10 DAYS) at 2024-02-08 (28 DAYS)
+
+Initializing report step 7/68 at 2024-02-08 (28 DAYS) line 28
+Complete report step 7 (10 DAYS) at 2024-02-18 (38 DAYS)
+
+Initializing report step 8/68 at 2024-02-18 (38 DAYS) line 28
+Complete report step 8 (10 DAYS) at 2024-02-28 (48 DAYS)
+
+Initializing report step 9/68 at 2024-02-28 (48 DAYS) line 28
+Complete report step 9 (10 DAYS) at 2024-03-09 (58 DAYS)
+
+Initializing report step 10/68 at 2024-03-09 (58 DAYS) line 28
+Complete report step 10 (10 DAYS) at 2024-03-19 (68 DAYS)
+
+Initializing report step 11/68 at 2024-03-19 (68 DAYS) line 28
+Complete report step 11 (10 DAYS) at 2024-03-29 (78 DAYS)
+
+Initializing report step 12/68 at 2024-03-29 (78 DAYS) line 28
+Complete report step 12 (10 DAYS) at 2024-04-08 (88 DAYS)
+
+Initializing report step 13/68 at 2024-04-08 (88 DAYS) line 28
+Complete report step 13 (10 DAYS) at 2024-04-18 (98 DAYS)
+
+Initializing report step 14/68 at 2024-04-18 (98 DAYS) line 28
+Complete report step 14 (10 DAYS) at 2024-04-28 (108 DAYS)
+
+Initializing report step 15/68 at 2024-04-28 (108 DAYS) line 28
+Complete report step 15 (10 DAYS) at 2024-05-08 (118 DAYS)
+
+Initializing report step 16/68 at 2024-05-08 (118 DAYS) line 28
+Complete report step 16 (10 DAYS) at 2024-05-18 (128 DAYS)
+
+Initializing report step 17/68 at 2024-05-18 (128 DAYS) line 28
+Complete report step 17 (10 DAYS) at 2024-05-28 (138 DAYS)
+
+Initializing report step 18/68 at 2024-05-28 (138 DAYS) line 28
+Complete report step 18 (10 DAYS) at 2024-06-07 (148 DAYS)
+
+Initializing report step 19/68 at 2024-06-07 (148 DAYS) line 28
+Complete report step 19 (10 DAYS) at 2024-06-17 (158 DAYS)
+
+Initializing report step 20/68 at 2024-06-17 (158 DAYS) line 28
+Complete report step 20 (10 DAYS) at 2024-06-27 (168 DAYS)
+
+Initializing report step 21/68 at 2024-06-27 (168 DAYS) line 28
+Complete report step 21 (10 DAYS) at 2024-07-07 (178 DAYS)
+
+Initializing report step 22/68 at 2024-07-07 (178 DAYS) line 28
+Complete report step 22 (10 DAYS) at 2024-07-17 (188 DAYS)
+
+Initializing report step 23/68 at 2024-07-17 (188 DAYS) line 28
+Complete report step 23 (10 DAYS) at 2024-07-27 (198 DAYS)
+
+Initializing report step 24/68 at 2024-07-27 (198 DAYS) line 28
+Complete report step 24 (10 DAYS) at 2024-08-06 (208 DAYS)
+
+Initializing report step 25/68 at 2024-08-06 (208 DAYS) line 28
+Complete report step 25 (10 DAYS) at 2024-08-16 (218 DAYS)
+
+Initializing report step 26/68 at 2024-08-16 (218 DAYS) line 28
+Complete report step 26 (10 DAYS) at 2024-08-26 (228 DAYS)
+
+Initializing report step 27/68 at 2024-08-26 (228 DAYS) line 28
+Complete report step 27 (10 DAYS) at 2024-09-05 (238 DAYS)
+
+Initializing report step 28/68 at 2024-09-05 (238 DAYS) line 28
+Complete report step 28 (10 DAYS) at 2024-09-15 (248 DAYS)
+
+Initializing report step 29/68 at 2024-09-15 (248 DAYS) line 28
+Complete report step 29 (10 DAYS) at 2024-09-25 (258 DAYS)
+
+Initializing report step 30/68 at 2024-09-25 (258 DAYS) line 28
+Complete report step 30 (10 DAYS) at 2024-10-05 (268 DAYS)
+
+Initializing report step 31/68 at 2024-10-05 (268 DAYS) line 28
+Complete report step 31 (10 DAYS) at 2024-10-15 (278 DAYS)
+
+Initializing report step 32/68 at 2024-10-15 (278 DAYS) line 28
+Complete report step 32 (10 DAYS) at 2024-10-25 (288 DAYS)
+
+Initializing report step 33/68 at 2024-10-25 (288 DAYS) line 28
+Complete report step 33 (10 DAYS) at 2024-11-04 (298 DAYS)
+
+Initializing report step 34/68 at 2024-11-04 (298 DAYS) line 28
+Complete report step 34 (10 DAYS) at 2024-11-14 (308 DAYS)
+
+Initializing report step 35/68 at 2024-11-14 (308 DAYS) line 28
+Complete report step 35 (10 DAYS) at 2024-11-24 (318 DAYS)
+
+Initializing report step 36/68 at 2024-11-24 (318 DAYS) line 28
+Complete report step 36 (10 DAYS) at 2024-12-04 (328 DAYS)
+
+Initializing report step 37/68 at 2024-12-04 (328 DAYS) line 28
+Complete report step 37 (10 DAYS) at 2024-12-14 (338 DAYS)
+
+Initializing report step 38/68 at 2024-12-14 (338 DAYS) line 28
+Processing keyword TUNING at line 32
+Complete report step 38 (18 DAYS) at 2025-01-01 (348 DAYS)
+
+Initializing report step 39/68 at 2025-01-01 (348 DAYS) line 37
+Complete report step 39 (365 DAYS) at 2026-01-01 (366 DAYS)
+
+Initializing report step 40/68 at 2026-01-01 (366 DAYS) line 37
+Complete report step 40 (365 DAYS) at 2027-01-01 (731 DAYS)
+
+Initializing report step 41/68 at 2027-01-01 (731 DAYS) line 37
+Complete report step 41 (365 DAYS) at 2028-01-01 (1096 DAYS)
+
+Initializing report step 42/68 at 2028-01-01 (1096 DAYS) line 37
+Complete report step 42 (366 DAYS) at 2029-01-01 (1461 DAYS)
+
+Initializing report step 43/68 at 2029-01-01 (1461 DAYS) line 37
+Complete report step 43 (365 DAYS) at 2030-01-01 (1827 DAYS)
+
+Initializing report step 44/68 at 2030-01-01 (1827 DAYS) line 37
+Complete report step 44 (365 DAYS) at 2031-01-01 (2192 DAYS)
+
+Initializing report step 45/68 at 2031-01-01 (2192 DAYS) line 37
+Complete report step 45 (365 DAYS) at 2032-01-01 (2557 DAYS)
+
+Initializing report step 46/68 at 2032-01-01 (2557 DAYS) line 37
+Complete report step 46 (366 DAYS) at 2033-01-01 (2922 DAYS)
+
+Initializing report step 47/68 at 2033-01-01 (2922 DAYS) line 37
+Complete report step 47 (365 DAYS) at 2034-01-01 (3288 DAYS)
+
+Initializing report step 48/68 at 2034-01-01 (3288 DAYS) line 37
+Complete report step 48 (365 DAYS) at 2035-01-01 (3653 DAYS)
+
+Initializing report step 49/68 at 2035-01-01 (3653 DAYS) line 37
+Complete report step 49 (365 DAYS) at 2036-01-01 (4018 DAYS)
+
+Initializing report step 50/68 at 2036-01-01 (4018 DAYS) line 37
+Complete report step 50 (366 DAYS) at 2037-01-01 (4383 DAYS)
+
+Initializing report step 51/68 at 2037-01-01 (4383 DAYS) line 37
+Complete report step 51 (365 DAYS) at 2038-01-01 (4749 DAYS)
+
+Initializing report step 52/68 at 2038-01-01 (4749 DAYS) line 37
+Complete report step 52 (365 DAYS) at 2039-01-01 (5114 DAYS)
+
+Initializing report step 53/68 at 2039-01-01 (5114 DAYS) line 37
+Complete report step 53 (365 DAYS) at 2040-01-01 (5479 DAYS)
+
+Initializing report step 54/68 at 2040-01-01 (5479 DAYS) line 37
+Complete report step 54 (366 DAYS) at 2041-01-01 (5844 DAYS)
+
+Initializing report step 55/68 at 2041-01-01 (5844 DAYS) line 37
+Complete report step 55 (365 DAYS) at 2042-01-01 (6210 DAYS)
+
+Initializing report step 56/68 at 2042-01-01 (6210 DAYS) line 37
+Complete report step 56 (365 DAYS) at 2043-01-01 (6575 DAYS)
+
+Initializing report step 57/68 at 2043-01-01 (6575 DAYS) line 37
+Complete report step 57 (365 DAYS) at 2044-01-01 (6940 DAYS)
+
+Initializing report step 58/68 at 2044-01-01 (6940 DAYS) line 37
+Complete report step 58 (366 DAYS) at 2045-01-01 (7305 DAYS)
+
+Initializing report step 59/68 at 2045-01-01 (7305 DAYS) line 37
+Complete report step 59 (365 DAYS) at 2046-01-01 (7671 DAYS)
+
+Initializing report step 60/68 at 2046-01-01 (7671 DAYS) line 37
+Complete report step 60 (365 DAYS) at 2047-01-01 (8036 DAYS)
+
+Initializing report step 61/68 at 2047-01-01 (8036 DAYS) line 37
+Complete report step 61 (365 DAYS) at 2048-01-01 (8401 DAYS)
+
+Initializing report step 62/68 at 2048-01-01 (8401 DAYS) line 37
+Complete report step 62 (366 DAYS) at 2049-01-01 (8766 DAYS)
+
+Initializing report step 63/68 at 2049-01-01 (8766 DAYS) line 37
+Processing keyword WCONINJE at line 65
+Processing keyword TUNING at line 82
+Complete report step 63 (365 DAYS) at 2050-01-01 (9132 DAYS)
+
+Initializing report step 64/68 at 2050-01-01 (9132 DAYS) line 87
+Complete report step 64 (36524 DAYS) at 2150-01-01 (9497 DAYS)
+
+Initializing report step 65/68 at 2150-01-01 (9497 DAYS) line 87
+Complete report step 65 (36524 DAYS) at 2250-01-01 (46021 DAYS)
+
+Initializing report step 66/68 at 2250-01-01 (46021 DAYS) line 87
+Complete report step 66 (36524 DAYS) at 1765-06-12 (82545 DAYS)
+
+Initializing report step 67/68 at 1765-06-12 (82545 DAYS) line 87
+Complete report step 67 (36525 DAYS) at 1865-06-13 (119069 DAYS)
+
+Initializing report step 68/68 at 1865-06-13 (119069 DAYS) line 87
+Complete report step 68 (36524 DAYS) at 1965-06-13 (155594 DAYS)
+
+
+The CO2 storage option is given. PVT properties from the Brine-CO2 system are used.
+See the OPM manual for details on the used models.
+
+Processing grid
+11319 pinch-out connections generated
+Total number of active cells: 173481 / total pore volume: 161991340503 RM3
+
+Load balancing distributes level 0 with 173481 active cells on 16 processes as follows:
+  rank   owned cells   overlap cells   total cells
+--------------------------------------------------
+     0         11298            1079         12377
+     1          8838             826          9664
+     2          8199             769          8968
+     3          7859             574          8433
+     4         11916            2681         14597
+     5         10704            3212         13916
+     6         11923            1481         13404
+     7         10904            1573         12477
+     8         11895            1554         13449
+     9         11657            4019         15676
+    10         11782            2951         14733
+    11         11648            3005         14653
+    12         11230            3484         14714
+    13         11919            6115         18034
+    14         11916            1690         13606
+    15          9793            1313         11106
+--------------------------------------------------
+   sum        173481           36326        209807
+
+
+Load balancing distributed the wells as follows:
+  well name            ranks with perforated cells
+---------------------------------------------------
+           INJ00       2
+           INJ01       8
+           INJ02       8
+           INJ03       2
+           INJ04      10
+           INJ05      10
+           INJ06       2
+           INJ07       8
+           INJ08       8
+           INJ09       8
+           INJ10       8
+           INJ11      11
+           INJ12       0
+           INJ13       2
+
+
+Property tree for linear solvers:
+{
+    "maxiter": "20",
+    "tol": "0.0050000000000000001",
+    "verbosity": "0",
+    "solver": "bicgstab",
+    "preconditioner": {
+        "type": "cprw",
+        "use_well_weights": "false",
+        "add_wells": "true",
+        "weight_type": "trueimpes",
+        "pre_smooth": "0",
+        "post_smooth": "1",
+        "finesmoother": {
+            "type": "paroverilu0",
+            "relaxation": "1"
+        },
+        "verbosity": "0",
+        "coarsesolver": {
+            "maxiter": "1",
+            "tol": "0.10000000000000001",
+            "solver": "loopsolver",
+            "verbosity": "0",
+            "preconditioner": {
+                "type": "amg",
+                "alpha": "0.33333333333300003",
+                "relaxation": "1",
+                "iterations": "1",
+                "coarsenTarget": "1200",
+                "pre_smooth": "1",
+                "post_smooth": "1",
+                "beta": "0",
+                "smoother": "ilu0",
+                "verbosity": "0",
+                "maxlevel": "15",
+                "skip_isolated": "0",
+                "accumulate": "1",
+                "prolongationdamping": "1",
+                "maxdistance": "2",
+                "maxconnectivity": "15",
+                "maxaggsize": "6",
+                "minaggsize": "4"
+            }
+        }
+    }
+}
+
+CO2STORE/CO2SOL is enabled.
+The surface density of CO2 is 1.868433 KG/M3.
+The surface density of brine is 1104.025630 KG/M3.
+The surface densities are computed using the reference pressure (1.013 BARSA) and reference temperature (15.56 DEG C).
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (40,140,1) -> (39,140,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (40,141,1) -> (39,141,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (39,142,1) -> (39,141,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (39,142,1) -> (38,142,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (33,148,1) -> (34,148,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (34,149,1) -> (34,148,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (34,151,1) -> (35,151,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (35,152,1) -> (35,151,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (36,154,1) -> (37,154,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (37,155,1) -> (37,154,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,161,1) -> (54,161,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,161,1) -> (53,162,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (52,162,1) -> (53,162,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (52,163,1) -> (53,163,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (52,163,1) -> (52,164,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (51,164,1) -> (52,164,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (34,200,1) -> (35,200,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (34,201,1) -> (35,201,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (34,202,1) -> (35,202,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (34,203,1) -> (35,203,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (34,204,1) -> (35,204,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (34,205,1) -> (35,205,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (34,206,1) -> (35,206,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (54,213,1) -> (55,213,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (54,214,1) -> (55,214,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (55,215,1) -> (55,214,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (63,227,1) -> (62,227,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (63,227,1) -> (63,228,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (43,229,1) -> (43,228,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (43,229,1) -> (44,229,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (44,230,1) -> (44,229,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (44,230,1) -> (45,230,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (45,231,1) -> (45,230,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (47,239,1) -> (46,239,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (47,240,1) -> (46,240,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (47,241,1) -> (46,241,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (47,244,1) -> (46,244,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (47,244,1) -> (47,245,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (48,245,1) -> (47,245,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (48,245,1) -> (48,246,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (49,246,1) -> (48,246,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (49,246,1) -> (49,247,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (49,247,1) -> (50,247,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (50,247,1) -> (49,247,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (50,248,1) -> (50,247,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (50,248,1) -> (51,248,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (51,249,1) -> (51,248,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (52,249,1) -> (51,249,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (51,250,1) -> (52,250,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (52,250,1) -> (51,250,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (50,251,1) -> (49,251,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (52,251,1) -> (52,250,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (52,251,1) -> (53,251,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (50,252,1) -> (49,252,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,252,1) -> (53,251,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,252,1) -> (54,252,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (54,252,1) -> (53,252,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (54,253,1) -> (53,253,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (54,253,1) -> (54,254,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (55,254,1) -> (54,254,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (55,255,1) -> (56,255,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (56,256,1) -> (56,255,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (56,256,1) -> (57,256,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (57,257,1) -> (57,256,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (58,258,1) -> (58,257,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (60,264,1) -> (61,264,2)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (39,139,2) -> (40,139,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (39,139,2) -> (40,139,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (35,141,2) -> (34,141,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (35,141,2) -> (34,141,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (60,149,2) -> (60,148,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (60,149,2) -> (59,149,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (60,150,2) -> (59,150,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (59,151,2) -> (59,150,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (59,151,2) -> (58,151,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (58,152,2) -> (58,151,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (58,152,2) -> (57,152,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (58,153,2) -> (57,153,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (57,154,2) -> (57,153,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (57,154,2) -> (56,154,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (57,155,2) -> (56,155,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (56,156,2) -> (56,155,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (56,156,2) -> (55,156,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (56,157,2) -> (55,157,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (55,158,2) -> (55,157,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (55,158,2) -> (54,158,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (54,159,2) -> (54,160,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (55,159,2) -> (54,159,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,160,2) -> (54,160,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (54,160,2) -> (54,159,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,161,2) -> (54,161,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,161,2) -> (54,161,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,161,2) -> (53,162,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,161,2) -> (53,162,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (54,161,2) -> (53,161,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (52,162,2) -> (53,162,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (52,162,2) -> (53,162,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,162,2) -> (53,161,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (52,163,2) -> (53,163,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (52,163,2) -> (52,164,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (52,163,2) -> (52,164,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (51,164,2) -> (52,164,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (51,164,2) -> (52,164,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (51,165,2) -> (52,165,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (51,165,2) -> (51,166,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (50,166,2) -> (51,166,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (51,194,2) -> (52,194,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (51,195,2) -> (52,195,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (51,196,2) -> (52,196,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (51,197,2) -> (52,197,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (51,198,2) -> (52,198,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (51,199,2) -> (52,199,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (51,200,2) -> (52,200,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (51,201,2) -> (52,201,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (51,202,2) -> (52,202,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (51,203,2) -> (52,203,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (52,204,2) -> (52,203,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (52,204,2) -> (53,204,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (52,205,2) -> (53,205,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,206,2) -> (53,205,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,206,2) -> (54,206,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,207,2) -> (54,207,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,208,2) -> (54,208,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,209,2) -> (54,209,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,210,2) -> (54,210,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (54,211,2) -> (54,210,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (54,211,2) -> (55,211,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (54,212,2) -> (55,212,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (54,213,2) -> (55,213,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (54,214,2) -> (55,214,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (55,215,2) -> (55,214,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (55,215,2) -> (56,215,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (55,216,2) -> (56,216,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (26,217,2) -> (27,217,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (26,217,2) -> (26,218,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (55,217,2) -> (56,217,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (14,218,2) -> (13,218,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (56,218,2) -> (56,217,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (56,218,2) -> (57,218,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (14,219,2) -> (13,219,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (26,219,2) -> (25,219,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (34,219,2) -> (33,219,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (56,219,2) -> (57,219,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (14,220,2) -> (13,220,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (14,220,2) -> (14,221,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (33,220,2) -> (33,219,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (56,220,2) -> (57,220,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (15,221,2) -> (14,221,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (57,221,2) -> (57,220,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (57,221,2) -> (58,221,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (15,222,2) -> (14,222,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (15,222,2) -> (15,223,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (57,222,2) -> (58,222,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (16,223,2) -> (15,223,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (58,223,2) -> (58,222,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (58,223,2) -> (59,223,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (16,224,2) -> (15,224,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (16,224,2) -> (16,225,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (59,224,2) -> (59,223,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (59,224,2) -> (60,224,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (17,225,2) -> (16,225,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (17,225,2) -> (17,226,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (60,225,2) -> (60,224,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (18,226,2) -> (17,226,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (18,226,2) -> (18,227,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (19,227,2) -> (18,227,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (19,227,2) -> (19,228,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (20,228,2) -> (19,228,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (20,228,2) -> (20,229,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (21,229,2) -> (20,229,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (21,229,2) -> (21,230,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (22,230,2) -> (21,230,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (22,231,2) -> (21,231,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (22,231,2) -> (22,232,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (23,232,2) -> (22,232,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (23,233,2) -> (23,234,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (23,233,2) -> (22,233,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (23,233,2) -> (23,234,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (24,234,2) -> (23,234,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (24,234,2) -> (24,235,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (24,234,2) -> (23,234,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (24,234,2) -> (24,235,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (22,235,2) -> (21,235,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (22,236,2) -> (21,236,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (22,237,2) -> (21,237,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (22,237,2) -> (21,237,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (22,238,2) -> (21,238,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (22,239,2) -> (21,239,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (22,240,2) -> (21,240,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (22,241,2) -> (21,241,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (22,242,2) -> (21,242,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (22,242,2) -> (22,243,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (23,243,2) -> (22,243,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (23,244,2) -> (22,244,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (23,244,2) -> (22,244,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (23,245,2) -> (22,245,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (23,246,2) -> (22,246,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (23,246,2) -> (23,247,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (24,247,2) -> (23,247,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (24,248,2) -> (23,248,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (24,249,2) -> (23,249,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (24,250,2) -> (23,250,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (24,250,2) -> (24,251,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (25,251,2) -> (24,251,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (25,252,2) -> (24,252,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (25,253,2) -> (24,253,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (49,253,2) -> (50,253,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (49,253,2) -> (50,253,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (25,254,2) -> (24,254,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (49,254,2) -> (50,254,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (25,255,2) -> (24,255,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (49,255,2) -> (50,255,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (25,256,2) -> (24,256,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (49,256,2) -> (50,256,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (25,257,2) -> (24,257,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (49,257,2) -> (50,257,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (25,258,2) -> (24,258,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (49,258,2) -> (50,258,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (25,259,2) -> (25,260,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (25,259,2) -> (24,259,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (25,259,2) -> (25,260,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (49,259,2) -> (50,259,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (25,260,2) -> (25,259,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (25,260,2) -> (26,260,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (49,260,2) -> (50,260,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (29,261,2) -> (29,260,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (29,261,2) -> (30,261,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (29,261,2) -> (29,260,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (29,261,2) -> (30,261,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (49,261,2) -> (50,261,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (49,262,2) -> (50,262,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (49,263,2) -> (50,263,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (49,264,2) -> (50,264,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (60,264,2) -> (61,264,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (61,264,2) -> (61,265,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (62,265,2) -> (61,265,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (62,266,2) -> (61,266,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (62,267,2) -> (61,267,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (62,268,2) -> (61,268,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (62,269,2) -> (61,269,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (62,269,2) -> (62,270,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (63,270,2) -> (62,270,3)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (62,144,3) -> (62,145,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (61,145,3) -> (62,145,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (61,146,3) -> (62,146,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (61,146,3) -> (61,147,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (60,147,3) -> (61,147,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (60,148,3) -> (61,148,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (60,148,3) -> (60,149,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (59,149,3) -> (60,149,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (59,150,3) -> (60,150,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (59,150,3) -> (59,151,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (58,151,3) -> (59,151,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (58,151,3) -> (58,152,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (57,152,3) -> (58,152,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (57,153,3) -> (58,153,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (57,153,3) -> (57,154,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (56,154,3) -> (57,154,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (56,155,3) -> (57,155,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (56,155,3) -> (56,156,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (55,156,3) -> (56,156,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (55,157,3) -> (56,157,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (55,157,3) -> (55,158,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (54,158,3) -> (55,158,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,160,3) -> (54,160,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,160,3) -> (54,160,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,161,3) -> (54,161,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,161,3) -> (53,162,4)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (53,161,3) -> (53,162,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (39,139,4) -> (40,139,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (35,141,4) -> (34,141,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (62,144,4) -> (62,145,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (29,261,4) -> (29,260,5)
+
+Warning: Problem with EDITNNC keyword
+In ecmor-2026/coarse/CEDITNNC.INC line 2
+No NNC defined for connection (29,261,4) -> (30,261,5)
+
+Warning: Problems with EDITNNC keyword
+A total of 274 connections not defined in grid
+
+
+================ Starting main simulation loop ===============
+
+
+Report step  0/68 at day 0/192118, date = 01-Jan-2024
+Using Newton nonlinear solver.
+
+Starting time step 0, stepsize 1 days, at day 0/1, date = 01-Jan-2024
+Restart file written for report step  0/68, date = 01-Jan-2024 00:00:00
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  0 (0.2sec)
+
+
+Report step  1/68 at day 1/192118, date = 02-Jan-2024
+
+Starting time step 0, stepsize 2 days, at day 1/3, date = 02-Jan-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step  1/68, date = 02-Jan-2024 00:00:00
+
+
+Report step  2/68 at day 3/192118, date = 04-Jan-2024
+
+Starting time step 0, stepsize 5 days, at day 3/8, date = 04-Jan-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step  2/68, date = 04-Jan-2024 00:00:00
+
+
+Report step  3/68 at day 8/192118, date = 09-Jan-2024
+
+Starting time step 0, stepsize 10 days, at day 8/18, date = 09-Jan-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step  3/68, date = 09-Jan-2024 00:00:00
+
+
+Report step  4/68 at day 18/192118, date = 19-Jan-2024
+
+Starting time step 0, stepsize 10 days, at day 18/28, date = 19-Jan-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step  4/68, date = 19-Jan-2024 00:00:00
+
+
+Report step  5/68 at day 28/192118, date = 29-Jan-2024
+
+Starting time step 0, stepsize 10 days, at day 28/38, date = 29-Jan-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step  5/68, date = 29-Jan-2024 00:00:00
+
+
+Report step  6/68 at day 38/192118, date = 08-Feb-2024
+
+Starting time step 0, stepsize 10 days, at day 38/48, date = 08-Feb-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step  6/68, date = 08-Feb-2024 00:00:00
+
+
+Report step  7/68 at day 48/192118, date = 18-Feb-2024
+
+Starting time step 0, stepsize 10 days, at day 48/58, date = 18-Feb-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step  7/68, date = 18-Feb-2024 00:00:00
+
+
+Report step  8/68 at day 58/192118, date = 28-Feb-2024
+
+Starting time step 0, stepsize 10 days, at day 58/68, date = 28-Feb-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step  8/68, date = 28-Feb-2024 00:00:00
+
+
+Report step  9/68 at day 68/192118, date = 09-Mar-2024
+
+Starting time step 0, stepsize 10 days, at day 68/78, date = 09-Mar-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step  9/68, date = 09-Mar-2024 00:00:00
+
+
+Report step 10/68 at day 78/192118, date = 19-Mar-2024
+
+Starting time step 0, stepsize 10 days, at day 78/88, date = 19-Mar-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 10/68, date = 19-Mar-2024 00:00:00
+
+
+Report step 11/68 at day 88/192118, date = 29-Mar-2024
+
+Starting time step 0, stepsize 10 days, at day 88/98, date = 29-Mar-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 11/68, date = 29-Mar-2024 00:00:00
+
+
+Report step 12/68 at day 98/192118, date = 08-Apr-2024
+
+Starting time step 0, stepsize 10 days, at day 98/108, date = 08-Apr-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 12/68, date = 08-Apr-2024 00:00:00
+
+
+Report step 13/68 at day 108/192118, date = 18-Apr-2024
+
+Starting time step 0, stepsize 10 days, at day 108/118, date = 18-Apr-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 13/68, date = 18-Apr-2024 00:00:00
+
+
+Report step 14/68 at day 118/192118, date = 28-Apr-2024
+
+Starting time step 0, stepsize 10 days, at day 118/128, date = 28-Apr-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 14/68, date = 28-Apr-2024 00:00:00
+
+
+Report step 15/68 at day 128/192118, date = 08-May-2024
+
+Starting time step 0, stepsize 10 days, at day 128/138, date = 08-May-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 15/68, date = 08-May-2024 00:00:00
+
+
+Report step 16/68 at day 138/192118, date = 18-May-2024
+
+Starting time step 0, stepsize 10 days, at day 138/148, date = 18-May-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 16/68, date = 18-May-2024 00:00:00
+
+
+Report step 17/68 at day 148/192118, date = 28-May-2024
+
+Starting time step 0, stepsize 10 days, at day 148/158, date = 28-May-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 17/68, date = 28-May-2024 00:00:00
+
+
+Report step 18/68 at day 158/192118, date = 07-Jun-2024
+
+Starting time step 0, stepsize 10 days, at day 158/168, date = 07-Jun-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 18/68, date = 07-Jun-2024 00:00:00
+
+
+Report step 19/68 at day 168/192118, date = 17-Jun-2024
+
+Starting time step 0, stepsize 10 days, at day 168/178, date = 17-Jun-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 19/68, date = 17-Jun-2024 00:00:00
+
+
+Report step 20/68 at day 178/192118, date = 27-Jun-2024
+
+Starting time step 0, stepsize 10 days, at day 178/188, date = 27-Jun-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 20/68, date = 27-Jun-2024 00:00:00
+
+
+Report step 21/68 at day 188/192118, date = 07-Jul-2024
+
+Starting time step 0, stepsize 10 days, at day 188/198, date = 07-Jul-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 21/68, date = 07-Jul-2024 00:00:00
+
+
+Report step 22/68 at day 198/192118, date = 17-Jul-2024
+
+Starting time step 0, stepsize 10 days, at day 198/208, date = 17-Jul-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 22/68, date = 17-Jul-2024 00:00:00
+
+
+Report step 23/68 at day 208/192118, date = 27-Jul-2024
+
+Starting time step 0, stepsize 10 days, at day 208/218, date = 27-Jul-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 23/68, date = 27-Jul-2024 00:00:00
+
+
+Report step 24/68 at day 218/192118, date = 06-Aug-2024
+
+Starting time step 0, stepsize 10 days, at day 218/228, date = 06-Aug-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 24/68, date = 06-Aug-2024 00:00:00
+
+
+Report step 25/68 at day 228/192118, date = 16-Aug-2024
+
+Starting time step 0, stepsize 10 days, at day 228/238, date = 16-Aug-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 25/68, date = 16-Aug-2024 00:00:00
+
+
+Report step 26/68 at day 238/192118, date = 26-Aug-2024
+
+Starting time step 0, stepsize 10 days, at day 238/248, date = 26-Aug-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 26/68, date = 26-Aug-2024 00:00:00
+
+
+Report step 27/68 at day 248/192118, date = 05-Sep-2024
+
+Starting time step 0, stepsize 10 days, at day 248/258, date = 05-Sep-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 27/68, date = 05-Sep-2024 00:00:00
+
+
+Report step 28/68 at day 258/192118, date = 15-Sep-2024
+
+Starting time step 0, stepsize 10 days, at day 258/268, date = 15-Sep-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 28/68, date = 15-Sep-2024 00:00:00
+
+
+Report step 29/68 at day 268/192118, date = 25-Sep-2024
+
+Starting time step 0, stepsize 10 days, at day 268/278, date = 25-Sep-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 29/68, date = 25-Sep-2024 00:00:00
+
+
+Report step 30/68 at day 278/192118, date = 05-Oct-2024
+
+Starting time step 0, stepsize 10 days, at day 278/288, date = 05-Oct-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.2sec)
+Restart file written for report step 30/68, date = 05-Oct-2024 00:00:00
+
+
+Report step 31/68 at day 288/192118, date = 15-Oct-2024
+
+Starting time step 0, stepsize 10 days, at day 288/298, date = 15-Oct-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 31/68, date = 15-Oct-2024 00:00:00
+
+
+Report step 32/68 at day 298/192118, date = 25-Oct-2024
+
+Starting time step 0, stepsize 10 days, at day 298/308, date = 25-Oct-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 32/68, date = 25-Oct-2024 00:00:00
+
+
+Report step 33/68 at day 308/192118, date = 04-Nov-2024
+
+Starting time step 0, stepsize 10 days, at day 308/318, date = 04-Nov-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 33/68, date = 04-Nov-2024 00:00:00
+
+
+Report step 34/68 at day 318/192118, date = 14-Nov-2024
+
+Starting time step 0, stepsize 10 days, at day 318/328, date = 14-Nov-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 34/68, date = 14-Nov-2024 00:00:00
+
+
+Report step 35/68 at day 328/192118, date = 24-Nov-2024
+
+Starting time step 0, stepsize 10 days, at day 328/338, date = 24-Nov-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.1sec)
+Restart file written for report step 35/68, date = 24-Nov-2024 00:00:00
+
+
+Report step 36/68 at day 338/192118, date = 04-Dec-2024
+
+Starting time step 0, stepsize 10 days, at day 338/348, date = 04-Dec-2024
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+Restart file written for report step 36/68, date = 04-Dec-2024 00:00:00
+
+
+Report step 37/68 at day 348/192118, date = 14-Dec-2024
+
+Starting time step 0, stepsize 10 days, at day 348/366, date = 14-Dec-2024
+ Newton its= 1, linearizations= 2 (0.1sec), linear its=  1 (0.1sec)
+Restart file written for report step 37/68, date = 14-Dec-2024 00:00:00
+
+Starting time step 1, stepsize 8 days, at day 358/366, date = 24-Dec-2024
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.1sec)
+
+
+Report step 38/68 at day 366/192118, date = 01-Jan-2025
+
+Starting time step 0, stepsize 24 days, at day 366/731, date = 01-Jan-2025
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+Restart file written for report step 38/68, date = 01-Jan-2025 00:00:00
+
+Starting time step 1, stepsize 72 days, at day 390/731, date = 25-Jan-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 2, stepsize 134.5 days, at day 462/731, date = 07-Apr-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 3, stepsize 134.5 days, at day 596.5/731, date = 19-Aug-2025
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  2 (0.1sec)
+
+
+Report step 39/68 at day 731/192118, date = 01-Jan-2026
+
+Starting time step 0, stepsize 365 days, at day 731/1096, date = 01-Jan-2026
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  5 (0.2sec)
+Restart file written for report step 39/68, date = 01-Jan-2026 00:00:00
+
+
+Report step 40/68 at day 1096/192118, date = 01-Jan-2027
+
+Starting time step 0, stepsize 365 days, at day 1096/1461, date = 01-Jan-2027
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+    Oscillating behavior detected: Relaxation set to 0.700000
+Restart file written for report step 40/68, date = 01-Jan-2027 00:00:00
+    Oscillating behavior detected: Relaxation set to 0.600000
+    Oscillating behavior detected: Relaxation set to 0.500000
+    Well INJ12 control mode changed from RATE to BHP
+ Newton its= 8, linearizations= 9 (0.1sec), linear its=  9 (0.3sec)
+
+
+Report step 41/68 at day 1461/192118, date = 01-Jan-2028
+
+Starting time step 0, stepsize 366 days, at day 1461/1827, date = 01-Jan-2028
+Restart file written for report step 41/68, date = 01-Jan-2028 00:00:00
+ Newton its= 5, linearizations= 6 (0.1sec), linear its=  6 (0.3sec)
+
+
+Report step 42/68 at day 1827/192118, date = 01-Jan-2029
+
+Starting time step 0, stepsize 365 days, at day 1827/2192, date = 01-Jan-2029
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  6 (0.1sec)
+Restart file written for report step 42/68, date = 01-Jan-2029 00:00:00
+
+
+Report step 43/68 at day 2192/192118, date = 01-Jan-2030
+
+Starting time step 0, stepsize 365 days, at day 2192/2557, date = 01-Jan-2030
+ Newton its= 5, linearizations= 6 (0.1sec), linear its=  7 (0.2sec)
+Restart file written for report step 43/68, date = 01-Jan-2030 00:00:00
+
+
+Report step 44/68 at day 2557/192118, date = 01-Jan-2031
+
+Starting time step 0, stepsize 365 days, at day 2557/2922, date = 01-Jan-2031
+ Newton its= 3, linearizations= 4 (0.1sec), linear its=  4 (0.1sec)
+Restart file written for report step 44/68, date = 01-Jan-2031 00:00:00
+
+
+Report step 45/68 at day 2922/192118, date = 01-Jan-2032
+
+Starting time step 0, stepsize 366 days, at day 2922/3288, date = 01-Jan-2032
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  7 (0.2sec)
+Restart file written for report step 45/68, date = 01-Jan-2032 00:00:00
+
+
+Report step 46/68 at day 3288/192118, date = 01-Jan-2033
+
+Starting time step 0, stepsize 365 days, at day 3288/3653, date = 01-Jan-2033
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  5 (0.1sec)
+Restart file written for report step 46/68, date = 01-Jan-2033 00:00:00
+
+
+Report step 47/68 at day 3653/192118, date = 01-Jan-2034
+
+Starting time step 0, stepsize 365 days, at day 3653/4018, date = 01-Jan-2034
+ Newton its= 3, linearizations= 4 (0.1sec), linear its=  4 (0.1sec)
+Restart file written for report step 47/68, date = 01-Jan-2034 00:00:00
+
+
+Report step 48/68 at day 4018/192118, date = 01-Jan-2035
+
+Starting time step 0, stepsize 365 days, at day 4018/4383, date = 01-Jan-2035
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  4 (0.1sec)
+Restart file written for report step 48/68, date = 01-Jan-2035 00:00:00
+
+
+Report step 49/68 at day 4383/192118, date = 01-Jan-2036
+
+Starting time step 0, stepsize 366 days, at day 4383/4749, date = 01-Jan-2036
+ Newton its= 3, linearizations= 4 (0.1sec), linear its=  5 (0.3sec)
+Restart file written for report step 49/68, date = 01-Jan-2036 00:00:00
+
+
+Report step 50/68 at day 4749/192118, date = 01-Jan-2037
+
+Starting time step 0, stepsize 365 days, at day 4749/5114, date = 01-Jan-2037
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  8 (0.2sec)
+Restart file written for report step 50/68, date = 01-Jan-2037 00:00:00
+
+
+Report step 51/68 at day 5114/192118, date = 01-Jan-2038
+
+Starting time step 0, stepsize 365 days, at day 5114/5479, date = 01-Jan-2038
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  5 (0.1sec)
+Restart file written for report step 51/68, date = 01-Jan-2038 00:00:00
+
+
+Report step 52/68 at day 5479/192118, date = 01-Jan-2039
+
+Starting time step 0, stepsize 365 days, at day 5479/5844, date = 01-Jan-2039
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  8 (0.2sec)
+Restart file written for report step 52/68, date = 01-Jan-2039 00:00:00
+
+
+Report step 53/68 at day 5844/192118, date = 01-Jan-2040
+
+Starting time step 0, stepsize 366 days, at day 5844/6210, date = 01-Jan-2040
+ Newton its= 3, linearizations= 4 (0.1sec), linear its=  5 (0.1sec)
+Restart file written for report step 53/68, date = 01-Jan-2040 00:00:00
+
+
+Report step 54/68 at day 6210/192118, date = 01-Jan-2041
+
+Starting time step 0, stepsize 365 days, at day 6210/6575, date = 01-Jan-2041
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  7 (0.2sec)
+Restart file written for report step 54/68, date = 01-Jan-2041 00:00:00
+
+
+Report step 55/68 at day 6575/192118, date = 01-Jan-2042
+
+Starting time step 0, stepsize 365 days, at day 6575/6940, date = 01-Jan-2042
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 3, linearizations= 4 (0.1sec), linear its=  5 (0.1sec)
+Restart file written for report step 55/68, date = 01-Jan-2042 00:00:00
+
+
+Report step 56/68 at day 6940/192118, date = 01-Jan-2043
+
+Starting time step 0, stepsize 365 days, at day 6940/7305, date = 01-Jan-2043
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  9 (0.2sec)
+Restart file written for report step 56/68, date = 01-Jan-2043 00:00:00
+
+
+Report step 57/68 at day 7305/192118, date = 01-Jan-2044
+
+Starting time step 0, stepsize 366 days, at day 7305/7671, date = 01-Jan-2044
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  9 (0.3sec)
+Restart file written for report step 57/68, date = 01-Jan-2044 00:00:00
+
+
+Report step 58/68 at day 7671/192118, date = 01-Jan-2045
+
+Starting time step 0, stepsize 365 days, at day 7671/8036, date = 01-Jan-2045
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  5 (0.2sec)
+Restart file written for report step 58/68, date = 01-Jan-2045 00:00:00
+
+
+Report step 59/68 at day 8036/192118, date = 01-Jan-2046
+
+Starting time step 0, stepsize 365 days, at day 8036/8401, date = 01-Jan-2046
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  7 (0.2sec)
+Restart file written for report step 59/68, date = 01-Jan-2046 00:00:00
+
+
+Report step 60/68 at day 8401/192118, date = 01-Jan-2047
+
+Starting time step 0, stepsize 365 days, at day 8401/8766, date = 01-Jan-2047
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  8 (0.2sec)
+Restart file written for report step 60/68, date = 01-Jan-2047 00:00:00
+
+
+Report step 61/68 at day 8766/192118, date = 01-Jan-2048
+
+Starting time step 0, stepsize 366 days, at day 8766/9132, date = 01-Jan-2048
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  9 (0.2sec)
+Restart file written for report step 61/68, date = 01-Jan-2048 00:00:00
+
+
+Report step 62/68 at day 9132/192118, date = 01-Jan-2049
+
+Starting time step 0, stepsize 365 days, at day 9132/9497, date = 01-Jan-2049
+ Newton its= 5, linearizations= 6 (0.1sec), linear its= 19 (0.3sec)
+Restart file written for report step 62/68, date = 01-Jan-2049 00:00:00
+
+
+Report step 63/68 at day 9497/192118, date = 01-Jan-2050
+
+Starting time step 0, stepsize 365.25 days, at day 9497/46021, date = 01-Jan-2050
+ Newton its= 7, linearizations= 8 (0.1sec), linear its= 30 (0.5sec)
+Restart file written for report step 63/68, date = 01-Jan-2050 00:00:00
+
+Starting time step 1, stepsize 365.25 days, at day 9862.25/46021, date = 01-Jan-2051
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.3sec)
+
+Starting time step 2, stepsize 365.25 days, at day 10227.5/46021, date = 01-Jan-2052
+ Newton its= 4, linearizations= 5 (0.1sec), linear its= 10 (0.2sec)
+
+Starting time step 3, stepsize 365.25 days, at day 10592.8/46021, date = 31-Dec-2052
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 4, stepsize 365.25 days, at day 10958/46021, date = 01-Jan-2054
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.3sec)
+
+Starting time step 5, stepsize 365.25 days, at day 11323.2/46021, date = 01-Jan-2055
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  9 (0.3sec)
+
+Starting time step 6, stepsize 365.25 days, at day 11688.5/46021, date = 01-Jan-2056
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 7, stepsize 365.25 days, at day 12053.8/46021, date = 31-Dec-2056
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 8, stepsize 365.25 days, at day 12419/46021, date = 01-Jan-2058
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  7 (0.2sec)
+
+Starting time step 9, stepsize 365.25 days, at day 12784.2/46021, date = 01-Jan-2059
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  9 (0.2sec)
+
+Starting time step 10, stepsize 365.25 days, at day 13149.5/46021, date = 01-Jan-2060
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.2sec)
+
+Starting time step 11, stepsize 365.25 days, at day 13514.8/46021, date = 31-Dec-2060
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 12, stepsize 365.25 days, at day 13880/46021, date = 01-Jan-2062
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  7 (0.2sec)
+
+Starting time step 13, stepsize 365.25 days, at day 14245.2/46021, date = 01-Jan-2063
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 14, stepsize 365.25 days, at day 14610.5/46021, date = 01-Jan-2064
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 15, stepsize 365.25 days, at day 14975.8/46021, date = 31-Dec-2064
+
+Problem: Solver convergence failure - Iteration limit reached
+Timestep chopped to 36.525 days
+
+
+Starting time step 15, stepsize 36.525 days, at day 14975.8/46021, date = 31-Dec-2064
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 16, stepsize 45.6562 days, at day 15012.3/46021, date = 06-Feb-2065
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 17, stepsize 136.969 days, at day 15057.9/46021, date = 23-Mar-2065
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  1 (0.0sec)
+
+Starting time step 18, stepsize 365.25 days, at day 15194.9/46021, date = 07-Aug-2065
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.3sec)
+
+Starting time step 19, stepsize 365.25 days, at day 15560.1/46021, date = 08-Aug-2066
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 20, stepsize 365.25 days, at day 15925.4/46021, date = 08-Aug-2067
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  8 (0.2sec)
+
+Starting time step 21, stepsize 365.25 days, at day 16290.6/46021, date = 07-Aug-2068
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  8 (0.1sec)
+
+Starting time step 22, stepsize 365.25 days, at day 16655.9/46021, date = 07-Aug-2069
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 23, stepsize 365.25 days, at day 17021.2/46021, date = 08-Aug-2070
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 24, stepsize 365.25 days, at day 17386.4/46021, date = 08-Aug-2071
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 25, stepsize 365.25 days, at day 17751.7/46021, date = 07-Aug-2072
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 26, stepsize 365.25 days, at day 18116.9/46021, date = 07-Aug-2073
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 27, stepsize 365.25 days, at day 18482.2/46021, date = 08-Aug-2074
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 28, stepsize 365.25 days, at day 18847.4/46021, date = 08-Aug-2075
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 29, stepsize 365.25 days, at day 19212.7/46021, date = 07-Aug-2076
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  8 (0.2sec)
+
+Starting time step 30, stepsize 365.25 days, at day 19577.9/46021, date = 07-Aug-2077
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  5 (0.3sec)
+
+Starting time step 31, stepsize 365.25 days, at day 19943.2/46021, date = 08-Aug-2078
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 32, stepsize 365.25 days, at day 20308.4/46021, date = 08-Aug-2079
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 33, stepsize 365.25 days, at day 20673.7/46021, date = 07-Aug-2080
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 34, stepsize 365.25 days, at day 21038.9/46021, date = 07-Aug-2081
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 35, stepsize 365.25 days, at day 21404.2/46021, date = 08-Aug-2082
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 36, stepsize 365.25 days, at day 21769.4/46021, date = 08-Aug-2083
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 37, stepsize 365.25 days, at day 22134.7/46021, date = 07-Aug-2084
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 38, stepsize 365.25 days, at day 22499.9/46021, date = 07-Aug-2085
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  7 (0.2sec)
+
+Starting time step 39, stepsize 365.25 days, at day 22865.2/46021, date = 08-Aug-2086
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 40, stepsize 365.25 days, at day 23230.4/46021, date = 08-Aug-2087
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  9 (0.2sec)
+
+Starting time step 41, stepsize 365.25 days, at day 23595.7/46021, date = 07-Aug-2088
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 42, stepsize 365.25 days, at day 23960.9/46021, date = 07-Aug-2089
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 43, stepsize 365.25 days, at day 24326.2/46021, date = 08-Aug-2090
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  8 (0.2sec)
+
+Starting time step 44, stepsize 365.25 days, at day 24691.4/46021, date = 08-Aug-2091
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  8 (0.3sec)
+
+Starting time step 45, stepsize 365.25 days, at day 25056.7/46021, date = 07-Aug-2092
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 46, stepsize 365.25 days, at day 25421.9/46021, date = 07-Aug-2093
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 47, stepsize 365.25 days, at day 25787.2/46021, date = 08-Aug-2094
+ Newton its= 3, linearizations= 4 (0.1sec), linear its=  6 (0.1sec)
+
+Starting time step 48, stepsize 365.25 days, at day 26152.4/46021, date = 08-Aug-2095
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 49, stepsize 365.25 days, at day 26517.7/46021, date = 07-Aug-2096
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  7 (0.2sec)
+
+Starting time step 50, stepsize 365.25 days, at day 26882.9/46021, date = 07-Aug-2097
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 51, stepsize 365.25 days, at day 27248.2/46021, date = 08-Aug-2098
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 52, stepsize 365.25 days, at day 27613.4/46021, date = 08-Aug-2099
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 53, stepsize 365.25 days, at day 27978.7/46021, date = 08-Aug-2100
+    Oscillating behavior detected: Relaxation set to 0.900000
+    Oscillating behavior detected: Relaxation set to 0.800000
+ Newton its= 6, linearizations= 7 (0.1sec), linear its= 10 (0.2sec)
+
+Starting time step 54, stepsize 365.25 days, at day 28343.9/46021, date = 08-Aug-2101
+ Newton its= 3, linearizations= 4 (0.1sec), linear its= 10 (0.3sec)
+
+Starting time step 55, stepsize 365.25 days, at day 28709.2/46021, date = 09-Aug-2102
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 56, stepsize 365.25 days, at day 29074.4/46021, date = 09-Aug-2103
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 57, stepsize 365.25 days, at day 29439.7/46021, date = 08-Aug-2104
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.3sec)
+
+Starting time step 58, stepsize 365.25 days, at day 29804.9/46021, date = 08-Aug-2105
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 59, stepsize 365.25 days, at day 30170.2/46021, date = 09-Aug-2106
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 60, stepsize 365.25 days, at day 30535.4/46021, date = 09-Aug-2107
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 61, stepsize 365.25 days, at day 30900.7/46021, date = 08-Aug-2108
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  7 (0.2sec)
+
+Starting time step 62, stepsize 365.25 days, at day 31265.9/46021, date = 08-Aug-2109
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 63, stepsize 365.25 days, at day 31631.2/46021, date = 09-Aug-2110
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 64, stepsize 365.25 days, at day 31996.4/46021, date = 09-Aug-2111
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  8 (0.2sec)
+
+Starting time step 65, stepsize 365.25 days, at day 32361.7/46021, date = 08-Aug-2112
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 66, stepsize 365.25 days, at day 32726.9/46021, date = 08-Aug-2113
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 67, stepsize 365.25 days, at day 33092.2/46021, date = 09-Aug-2114
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 68, stepsize 365.25 days, at day 33457.4/46021, date = 09-Aug-2115
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 69, stepsize 365.25 days, at day 33822.7/46021, date = 08-Aug-2116
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 70, stepsize 365.25 days, at day 34187.9/46021, date = 08-Aug-2117
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 71, stepsize 365.25 days, at day 34553.2/46021, date = 09-Aug-2118
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  6 (0.3sec)
+
+Starting time step 72, stepsize 365.25 days, at day 34918.4/46021, date = 09-Aug-2119
+ Newton its= 3, linearizations= 4 (0.1sec), linear its=  6 (0.1sec)
+
+Starting time step 73, stepsize 365.25 days, at day 35283.7/46021, date = 08-Aug-2120
+ Newton its= 3, linearizations= 4 (0.1sec), linear its=  7 (0.2sec)
+
+Starting time step 74, stepsize 365.25 days, at day 35648.9/46021, date = 08-Aug-2121
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (1.6sec)
+
+Starting time step 75, stepsize 365.25 days, at day 36014.2/46021, date = 09-Aug-2122
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 76, stepsize 365.25 days, at day 36379.4/46021, date = 09-Aug-2123
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  9 (0.2sec)
+
+Starting time step 77, stepsize 365.25 days, at day 36744.7/46021, date = 08-Aug-2124
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  9 (0.2sec)
+
+Starting time step 78, stepsize 365.25 days, at day 37109.9/46021, date = 08-Aug-2125
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  7 (0.2sec)
+
+Starting time step 79, stepsize 365.25 days, at day 37475.2/46021, date = 09-Aug-2126
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 80, stepsize 365.25 days, at day 37840.4/46021, date = 09-Aug-2127
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 11 (0.2sec)
+
+Starting time step 81, stepsize 365.25 days, at day 38205.7/46021, date = 08-Aug-2128
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 82, stepsize 365.25 days, at day 38570.9/46021, date = 08-Aug-2129
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 83, stepsize 365.25 days, at day 38936.2/46021, date = 09-Aug-2130
+ Newton its= 4, linearizations= 5 (0.0sec), linear its= 13 (0.4sec)
+
+Starting time step 84, stepsize 365.25 days, at day 39301.4/46021, date = 09-Aug-2131
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 85, stepsize 365.25 days, at day 39666.7/46021, date = 08-Aug-2132
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 86, stepsize 365.25 days, at day 40031.9/46021, date = 08-Aug-2133
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  9 (0.2sec)
+
+Starting time step 87, stepsize 365.25 days, at day 40397.2/46021, date = 09-Aug-2134
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 88, stepsize 365.25 days, at day 40762.4/46021, date = 09-Aug-2135
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 4, linearizations= 5 (0.1sec), linear its=  8 (0.2sec)
+
+Starting time step 89, stepsize 365.25 days, at day 41127.7/46021, date = 08-Aug-2136
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 90, stepsize 365.25 days, at day 41492.9/46021, date = 08-Aug-2137
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 7, linearizations= 8 (0.1sec), linear its= 25 (0.5sec)
+
+Starting time step 91, stepsize 365.25 days, at day 41858.2/46021, date = 09-Aug-2138
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  8 (0.2sec)
+
+Starting time step 92, stepsize 365.25 days, at day 42223.4/46021, date = 09-Aug-2139
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 93, stepsize 365.25 days, at day 42588.7/46021, date = 08-Aug-2140
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 94, stepsize 365.25 days, at day 42953.9/46021, date = 08-Aug-2141
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 95, stepsize 365.25 days, at day 43319.2/46021, date = 09-Aug-2142
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  7 (0.3sec)
+
+Starting time step 96, stepsize 365.25 days, at day 43684.4/46021, date = 09-Aug-2143
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 97, stepsize 365.25 days, at day 44049.7/46021, date = 08-Aug-2144
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 98, stepsize 365.25 days, at day 44414.9/46021, date = 08-Aug-2145
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 99, stepsize 365.25 days, at day 44780.2/46021, date = 09-Aug-2146
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 100, stepsize 365.25 days, at day 45145.4/46021, date = 09-Aug-2147
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 101, stepsize 255.175 days, at day 45510.7/46021, date = 08-Aug-2148
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 102, stepsize 255.175 days, at day 45765.8/46021, date = 20-Apr-2149
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+
+Report step 64/68 at day 46021/192118, date = 01-Jan-2150
+
+Starting time step 0, stepsize 365.25 days, at day 46021/82545, date = 01-Jan-2150
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+Restart file written for report step 64/68, date = 01-Jan-2150 00:00:00
+
+Starting time step 1, stepsize 365.25 days, at day 46386.2/82545, date = 01-Jan-2151
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 2, stepsize 365.25 days, at day 46751.5/82545, date = 01-Jan-2152
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 3, stepsize 365.25 days, at day 47116.8/82545, date = 31-Dec-2152
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 4, stepsize 365.25 days, at day 47482/82545, date = 01-Jan-2154
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 5, stepsize 365.25 days, at day 47847.2/82545, date = 01-Jan-2155
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 6, stepsize 365.25 days, at day 48212.5/82545, date = 01-Jan-2156
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 7, stepsize 365.25 days, at day 48577.8/82545, date = 31-Dec-2156
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 8, stepsize 365.25 days, at day 48943/82545, date = 01-Jan-2158
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 9, stepsize 365.25 days, at day 49308.2/82545, date = 01-Jan-2159
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 10, stepsize 365.25 days, at day 49673.5/82545, date = 01-Jan-2160
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 11, stepsize 365.25 days, at day 50038.8/82545, date = 31-Dec-2160
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.3sec)
+
+Starting time step 12, stepsize 365.25 days, at day 50404/82545, date = 01-Jan-2162
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 13, stepsize 365.25 days, at day 50769.2/82545, date = 01-Jan-2163
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 14, stepsize 365.25 days, at day 51134.5/82545, date = 01-Jan-2164
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 15, stepsize 365.25 days, at day 51499.8/82545, date = 31-Dec-2164
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 16, stepsize 365.25 days, at day 51865/82545, date = 01-Jan-2166
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 17, stepsize 365.25 days, at day 52230.2/82545, date = 01-Jan-2167
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 18, stepsize 365.25 days, at day 52595.5/82545, date = 01-Jan-2168
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 19, stepsize 365.25 days, at day 52960.8/82545, date = 31-Dec-2168
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 20, stepsize 365.25 days, at day 53326/82545, date = 01-Jan-2170
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 21, stepsize 365.25 days, at day 53691.2/82545, date = 01-Jan-2171
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 22, stepsize 365.25 days, at day 54056.5/82545, date = 01-Jan-2172
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 23, stepsize 365.25 days, at day 54421.8/82545, date = 31-Dec-2172
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  7 (0.2sec)
+
+Starting time step 24, stepsize 365.25 days, at day 54787/82545, date = 01-Jan-2174
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 25, stepsize 365.25 days, at day 55152.2/82545, date = 01-Jan-2175
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 26, stepsize 365.25 days, at day 55517.5/82545, date = 01-Jan-2176
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 27, stepsize 365.25 days, at day 55882.8/82545, date = 31-Dec-2176
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.2sec)
+
+Starting time step 28, stepsize 365.25 days, at day 56248/82545, date = 01-Jan-2178
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 10 (0.2sec)
+
+Starting time step 29, stepsize 365.25 days, at day 56613.2/82545, date = 01-Jan-2179
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 30, stepsize 365.25 days, at day 56978.5/82545, date = 01-Jan-2180
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 31, stepsize 365.25 days, at day 57343.8/82545, date = 31-Dec-2180
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.2sec)
+
+Starting time step 32, stepsize 365.25 days, at day 57709/82545, date = 01-Jan-2182
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 33, stepsize 365.25 days, at day 58074.2/82545, date = 01-Jan-2183
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 34, stepsize 365.25 days, at day 58439.5/82545, date = 01-Jan-2184
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 35, stepsize 365.25 days, at day 58804.8/82545, date = 31-Dec-2184
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 36, stepsize 365.25 days, at day 59170/82545, date = 01-Jan-2186
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 37, stepsize 365.25 days, at day 59535.2/82545, date = 01-Jan-2187
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 38, stepsize 365.25 days, at day 59900.5/82545, date = 01-Jan-2188
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 39, stepsize 365.25 days, at day 60265.8/82545, date = 31-Dec-2188
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  9 (0.2sec)
+
+Starting time step 40, stepsize 365.25 days, at day 60631/82545, date = 01-Jan-2190
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 41, stepsize 365.25 days, at day 60996.2/82545, date = 01-Jan-2191
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 42, stepsize 365.25 days, at day 61361.5/82545, date = 01-Jan-2192
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  9 (0.2sec)
+
+Starting time step 43, stepsize 365.25 days, at day 61726.8/82545, date = 31-Dec-2192
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 44, stepsize 365.25 days, at day 62092/82545, date = 01-Jan-2194
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 45, stepsize 365.25 days, at day 62457.2/82545, date = 01-Jan-2195
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 46, stepsize 365.25 days, at day 62822.5/82545, date = 01-Jan-2196
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 47, stepsize 365.25 days, at day 63187.8/82545, date = 31-Dec-2196
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  7 (0.2sec)
+
+Starting time step 48, stepsize 365.25 days, at day 63553/82545, date = 01-Jan-2198
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.3sec)
+
+Starting time step 49, stepsize 365.25 days, at day 63918.2/82545, date = 01-Jan-2199
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 50, stepsize 365.25 days, at day 64283.5/82545, date = 01-Jan-2200
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 51, stepsize 365.25 days, at day 64648.8/82545, date = 01-Jan-2201
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.2sec)
+
+Starting time step 52, stepsize 365.25 days, at day 65014/82545, date = 02-Jan-2202
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 53, stepsize 365.25 days, at day 65379.2/82545, date = 02-Jan-2203
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 54, stepsize 365.25 days, at day 65744.5/82545, date = 02-Jan-2204
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 55, stepsize 365.25 days, at day 66109.8/82545, date = 01-Jan-2205
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 56, stepsize 365.25 days, at day 66475/82545, date = 02-Jan-2206
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 57, stepsize 365.25 days, at day 66840.2/82545, date = 02-Jan-2207
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 58, stepsize 365.25 days, at day 67205.5/82545, date = 02-Jan-2208
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 59, stepsize 365.25 days, at day 67570.8/82545, date = 01-Jan-2209
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 60, stepsize 365.25 days, at day 67936/82545, date = 02-Jan-2210
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 61, stepsize 365.25 days, at day 68301.2/82545, date = 02-Jan-2211
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 62, stepsize 365.25 days, at day 68666.5/82545, date = 02-Jan-2212
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 63, stepsize 365.25 days, at day 69031.8/82545, date = 01-Jan-2213
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  9 (0.2sec)
+
+Starting time step 64, stepsize 365.25 days, at day 69397/82545, date = 02-Jan-2214
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.2sec)
+
+Starting time step 65, stepsize 365.25 days, at day 69762.2/82545, date = 02-Jan-2215
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 66, stepsize 365.25 days, at day 70127.5/82545, date = 02-Jan-2216
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 67, stepsize 365.25 days, at day 70492.8/82545, date = 01-Jan-2217
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 68, stepsize 365.25 days, at day 70858/82545, date = 02-Jan-2218
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 69, stepsize 365.25 days, at day 71223.2/82545, date = 02-Jan-2219
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 70, stepsize 365.25 days, at day 71588.5/82545, date = 02-Jan-2220
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 71, stepsize 365.25 days, at day 71953.8/82545, date = 01-Jan-2221
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 72, stepsize 365.25 days, at day 72319/82545, date = 02-Jan-2222
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 73, stepsize 365.25 days, at day 72684.2/82545, date = 02-Jan-2223
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 74, stepsize 365.25 days, at day 73049.5/82545, date = 02-Jan-2224
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.2sec)
+
+Starting time step 75, stepsize 365.25 days, at day 73414.8/82545, date = 01-Jan-2225
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 76, stepsize 365.25 days, at day 73780/82545, date = 02-Jan-2226
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 77, stepsize 365.25 days, at day 74145.2/82545, date = 02-Jan-2227
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 78, stepsize 365.25 days, at day 74510.5/82545, date = 02-Jan-2228
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 79, stepsize 365.25 days, at day 74875.8/82545, date = 01-Jan-2229
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 80, stepsize 365.25 days, at day 75241/82545, date = 02-Jan-2230
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 81, stepsize 365.25 days, at day 75606.2/82545, date = 02-Jan-2231
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 82, stepsize 365.25 days, at day 75971.5/82545, date = 02-Jan-2232
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 83, stepsize 365.25 days, at day 76336.8/82545, date = 01-Jan-2233
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 84, stepsize 365.25 days, at day 76702/82545, date = 02-Jan-2234
+ Newton its= 3, linearizations= 4 (0.1sec), linear its=  9 (0.3sec)
+
+Starting time step 85, stepsize 365.25 days, at day 77067.2/82545, date = 02-Jan-2235
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 86, stepsize 365.25 days, at day 77432.5/82545, date = 02-Jan-2236
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 87, stepsize 365.25 days, at day 77797.8/82545, date = 01-Jan-2237
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 88, stepsize 365.25 days, at day 78163/82545, date = 02-Jan-2238
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 89, stepsize 365.25 days, at day 78528.2/82545, date = 02-Jan-2239
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.2sec)
+
+Starting time step 90, stepsize 365.25 days, at day 78893.5/82545, date = 02-Jan-2240
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 91, stepsize 365.25 days, at day 79258.8/82545, date = 01-Jan-2241
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 92, stepsize 365.25 days, at day 79624/82545, date = 02-Jan-2242
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 93, stepsize 365.25 days, at day 79989.2/82545, date = 02-Jan-2243
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 94, stepsize 365.25 days, at day 80354.5/82545, date = 02-Jan-2244
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 95, stepsize 365.25 days, at day 80719.8/82545, date = 01-Jan-2245
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 96, stepsize 365.25 days, at day 81085/82545, date = 02-Jan-2246
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 97, stepsize 365.25 days, at day 81450.2/82545, date = 02-Jan-2247
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  8 (0.2sec)
+
+Starting time step 98, stepsize 365.25 days, at day 81815.5/82545, date = 02-Jan-2248
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 99, stepsize 364.25 days, at day 82180.8/82545, date = 01-Jan-2249
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+
+Report step 65/68 at day 82545/192118, date = 01-Jan-2250
+
+Starting time step 0, stepsize 365.25 days, at day 82545/119069, date = 01-Jan-2250
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+Restart file written for report step 65/68, date = 01-Jan-2250 00:00:00
+
+Starting time step 1, stepsize 365.25 days, at day 82910.2/119069, date = 01-Jan-2251
+ Newton its= 2, linearizations= 3 (0.1sec), linear its=  6 (0.1sec)
+
+Starting time step 2, stepsize 365.25 days, at day 83275.5/119069, date = 01-Jan-2252
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 3, stepsize 365.25 days, at day 83640.8/119069, date = 31-Dec-2252
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.3sec)
+
+Starting time step 4, stepsize 365.25 days, at day 84006/119069, date = 01-Jan-2254
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 5, stepsize 365.25 days, at day 84371.2/119069, date = 01-Jan-2255
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 6, stepsize 365.25 days, at day 84736.5/119069, date = 01-Jan-2256
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 7, stepsize 365.25 days, at day 85101.8/119069, date = 31-Dec-2256
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 8, stepsize 365.25 days, at day 85467/119069, date = 01-Jan-2258
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 9, stepsize 365.25 days, at day 85832.2/119069, date = 01-Jan-2259
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (1.6sec)
+
+Starting time step 10, stepsize 365.25 days, at day 86197.5/119069, date = 01-Jan-2260
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 11, stepsize 365.25 days, at day 86562.8/119069, date = 31-Dec-2260
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 12, stepsize 365.25 days, at day 86928/119069, date = 01-Jan-2262
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 13, stepsize 365.25 days, at day 87293.2/119069, date = 01-Jan-2263
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 14, stepsize 365.25 days, at day 87658.5/119069, date = 01-Jan-2264
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 15, stepsize 365.25 days, at day 88023.8/119069, date = 31-Dec-2264
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 16, stepsize 365.25 days, at day 88389/119069, date = 01-Jan-2266
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 17, stepsize 365.25 days, at day 88754.2/119069, date = 01-Jan-2267
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 18, stepsize 365.25 days, at day 89119.5/119069, date = 01-Jan-2268
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 19, stepsize 365.25 days, at day 89484.8/119069, date = 31-Dec-2268
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 20, stepsize 365.25 days, at day 89850/119069, date = 01-Jan-2270
+    Oscillating behavior detected: Relaxation set to 0.900000
+ Newton its= 3, linearizations= 4 (0.0sec), linear its= 10 (0.2sec)
+
+Starting time step 21, stepsize 365.25 days, at day 90215.2/119069, date = 01-Jan-2271
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 22, stepsize 365.25 days, at day 90580.5/119069, date = 01-Jan-2272
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 23, stepsize 365.25 days, at day 90945.8/119069, date = 31-Dec-2272
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.4sec)
+
+Starting time step 24, stepsize 365.25 days, at day 91311/119069, date = 01-Jan-2274
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 25, stepsize 365.25 days, at day 91676.2/119069, date = 01-Jan-2275
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 26, stepsize 365.25 days, at day 92041.5/119069, date = 01-Jan-2276
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 27, stepsize 365.25 days, at day 92406.8/119069, date = 31-Dec-2276
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 28, stepsize 365.25 days, at day 92772/119069, date = 01-Jan-2278
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 29, stepsize 365.25 days, at day 93137.2/119069, date = 01-Jan-2279
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 30, stepsize 365.25 days, at day 93502.5/119069, date = 01-Jan-2280
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 31, stepsize 365.25 days, at day 93867.8/119069, date = 31-Dec-2280
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 32, stepsize 365.25 days, at day 94233/119069, date = 01-Jan-2282
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 33, stepsize 365.25 days, at day 94598.2/119069, date = 01-Jan-2283
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 34, stepsize 365.25 days, at day 94963.5/119069, date = 01-Jan-2284
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 35, stepsize 365.25 days, at day 95328.8/119069, date = 31-Dec-2284
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 36, stepsize 365.25 days, at day 95694/119069, date = 01-Jan-2286
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 37, stepsize 365.25 days, at day 96059.2/119069, date = 01-Jan-2287
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 38, stepsize 365.25 days, at day 96424.5/119069, date = 01-Jan-2288
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 39, stepsize 365.25 days, at day 96789.8/119069, date = 31-Dec-2288
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 40, stepsize 365.25 days, at day 97155/119069, date = 01-Jan-2290
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 41, stepsize 365.25 days, at day 97520.2/119069, date = 01-Jan-2291
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 42, stepsize 365.25 days, at day 97885.5/119069, date = 01-Jan-2292
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 43, stepsize 365.25 days, at day 98250.8/119069, date = 31-Dec-2292
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 44, stepsize 365.25 days, at day 98616/119069, date = 01-Jan-2294
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.3sec)
+
+Starting time step 45, stepsize 365.25 days, at day 98981.2/119069, date = 01-Jan-2295
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 46, stepsize 365.25 days, at day 99346.5/119069, date = 01-Jan-2296
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 47, stepsize 365.25 days, at day 99711.8/119069, date = 31-Dec-2296
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 48, stepsize 365.25 days, at day 100077/119069, date = 01-Jan-2298
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 49, stepsize 365.25 days, at day 100442/119069, date = 01-Jan-2299
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 50, stepsize 365.25 days, at day 100808/119069, date = 01-Jan-2300
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 51, stepsize 365.25 days, at day 101173/119069, date = 01-Jan-2301
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 52, stepsize 365.25 days, at day 101538/119069, date = 02-Jan-2302
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 53, stepsize 365.25 days, at day 101903/119069, date = 02-Jan-2303
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 54, stepsize 365.25 days, at day 102268/119069, date = 02-Jan-2304
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 55, stepsize 365.25 days, at day 102634/119069, date = 01-Jan-2305
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 56, stepsize 365.25 days, at day 102999/119069, date = 02-Jan-2306
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 57, stepsize 365.25 days, at day 103364/119069, date = 02-Jan-2307
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 58, stepsize 365.25 days, at day 103730/119069, date = 02-Jan-2308
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 59, stepsize 365.25 days, at day 104095/119069, date = 01-Jan-2309
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 60, stepsize 365.25 days, at day 104460/119069, date = 02-Jan-2310
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 61, stepsize 365.25 days, at day 104825/119069, date = 02-Jan-2311
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 62, stepsize 365.25 days, at day 105190/119069, date = 02-Jan-2312
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 63, stepsize 365.25 days, at day 105556/119069, date = 01-Jan-2313
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 64, stepsize 365.25 days, at day 105921/119069, date = 02-Jan-2314
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 65, stepsize 365.25 days, at day 106286/119069, date = 02-Jan-2315
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 66, stepsize 365.25 days, at day 106652/119069, date = 02-Jan-2316
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 67, stepsize 365.25 days, at day 107017/119069, date = 01-Jan-2317
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 68, stepsize 365.25 days, at day 107382/119069, date = 02-Jan-2318
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 69, stepsize 365.25 days, at day 107747/119069, date = 02-Jan-2319
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.2sec)
+
+Starting time step 70, stepsize 365.25 days, at day 108112/119069, date = 02-Jan-2320
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 71, stepsize 365.25 days, at day 108478/119069, date = 01-Jan-2321
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 72, stepsize 365.25 days, at day 108843/119069, date = 02-Jan-2322
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 73, stepsize 365.25 days, at day 109208/119069, date = 02-Jan-2323
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 74, stepsize 365.25 days, at day 109574/119069, date = 02-Jan-2324
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 75, stepsize 365.25 days, at day 109939/119069, date = 01-Jan-2325
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 76, stepsize 365.25 days, at day 110304/119069, date = 02-Jan-2326
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 77, stepsize 365.25 days, at day 110669/119069, date = 02-Jan-2327
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 78, stepsize 365.25 days, at day 111034/119069, date = 02-Jan-2328
+ Newton its= 2, linearizations= 3 (0.1sec), linear its=  7 (0.2sec)
+
+Starting time step 79, stepsize 365.25 days, at day 111400/119069, date = 01-Jan-2329
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 80, stepsize 365.25 days, at day 111765/119069, date = 02-Jan-2330
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 81, stepsize 365.25 days, at day 112130/119069, date = 02-Jan-2331
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.4sec)
+
+Starting time step 82, stepsize 365.25 days, at day 112496/119069, date = 02-Jan-2332
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 83, stepsize 365.25 days, at day 112861/119069, date = 01-Jan-2333
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.2sec)
+
+Starting time step 84, stepsize 365.25 days, at day 113226/119069, date = 02-Jan-2334
+ Newton its= 2, linearizations= 3 (0.1sec), linear its=  7 (0.6sec)
+
+Starting time step 85, stepsize 365.25 days, at day 113591/119069, date = 02-Jan-2335
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 86, stepsize 365.25 days, at day 113956/119069, date = 02-Jan-2336
+ Newton its= 2, linearizations= 3 (0.1sec), linear its=  6 (0.3sec)
+
+Starting time step 87, stepsize 365.25 days, at day 114322/119069, date = 01-Jan-2337
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 88, stepsize 365.25 days, at day 114687/119069, date = 02-Jan-2338
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 89, stepsize 365.25 days, at day 115052/119069, date = 02-Jan-2339
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 90, stepsize 365.25 days, at day 115418/119069, date = 02-Jan-2340
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 91, stepsize 365.25 days, at day 115783/119069, date = 01-Jan-2341
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 92, stepsize 365.25 days, at day 116148/119069, date = 02-Jan-2342
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 93, stepsize 365.25 days, at day 116513/119069, date = 02-Jan-2343
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.2sec)
+
+Starting time step 94, stepsize 365.25 days, at day 116878/119069, date = 02-Jan-2344
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.2sec)
+
+Starting time step 95, stepsize 365.25 days, at day 117244/119069, date = 01-Jan-2345
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 96, stepsize 365.25 days, at day 117609/119069, date = 02-Jan-2346
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 97, stepsize 365.25 days, at day 117974/119069, date = 02-Jan-2347
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 98, stepsize 365.25 days, at day 118340/119069, date = 02-Jan-2348
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 99, stepsize 364.25 days, at day 118705/119069, date = 01-Jan-2349
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+
+Report step 66/68 at day 119069/192118, date = 01-Jan-2350
+
+Starting time step 0, stepsize 365.25 days, at day 119069/155594, date = 01-Jan-2350
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+Restart file written for report step 66/68, date = 01-Jan-2350 00:00:00
+
+Starting time step 1, stepsize 365.25 days, at day 119434/155594, date = 01-Jan-2351
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 2, stepsize 365.25 days, at day 119800/155594, date = 01-Jan-2352
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 3, stepsize 365.25 days, at day 120165/155594, date = 31-Dec-2352
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 4, stepsize 365.25 days, at day 120530/155594, date = 01-Jan-2354
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 5, stepsize 365.25 days, at day 120895/155594, date = 01-Jan-2355
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 6, stepsize 365.25 days, at day 121260/155594, date = 01-Jan-2356
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 7, stepsize 365.25 days, at day 121626/155594, date = 31-Dec-2356
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 8, stepsize 365.25 days, at day 121991/155594, date = 01-Jan-2358
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 9, stepsize 365.25 days, at day 122356/155594, date = 01-Jan-2359
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 10, stepsize 365.25 days, at day 122722/155594, date = 01-Jan-2360
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 11, stepsize 365.25 days, at day 123087/155594, date = 31-Dec-2360
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 12, stepsize 365.25 days, at day 123452/155594, date = 01-Jan-2362
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 13, stepsize 365.25 days, at day 123817/155594, date = 01-Jan-2363
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 14, stepsize 365.25 days, at day 124182/155594, date = 01-Jan-2364
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 15, stepsize 365.25 days, at day 124548/155594, date = 31-Dec-2364
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 16, stepsize 365.25 days, at day 124913/155594, date = 01-Jan-2366
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.2sec)
+
+Starting time step 17, stepsize 365.25 days, at day 125278/155594, date = 01-Jan-2367
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.2sec)
+
+Starting time step 18, stepsize 365.25 days, at day 125644/155594, date = 01-Jan-2368
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 19, stepsize 365.25 days, at day 126009/155594, date = 31-Dec-2368
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 20, stepsize 365.25 days, at day 126374/155594, date = 01-Jan-2370
+ Newton its= 3, linearizations= 4 (0.0sec), linear its=  8 (0.2sec)
+
+Starting time step 21, stepsize 365.25 days, at day 126739/155594, date = 01-Jan-2371
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 22, stepsize 365.25 days, at day 127104/155594, date = 01-Jan-2372
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 23, stepsize 365.25 days, at day 127470/155594, date = 31-Dec-2372
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 24, stepsize 365.25 days, at day 127835/155594, date = 01-Jan-2374
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 25, stepsize 365.25 days, at day 128200/155594, date = 01-Jan-2375
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 26, stepsize 365.25 days, at day 128566/155594, date = 01-Jan-2376
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 27, stepsize 365.25 days, at day 128931/155594, date = 31-Dec-2376
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 28, stepsize 365.25 days, at day 129296/155594, date = 01-Jan-2378
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 29, stepsize 365.25 days, at day 129661/155594, date = 01-Jan-2379
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 30, stepsize 365.25 days, at day 130026/155594, date = 01-Jan-2380
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 31, stepsize 365.25 days, at day 130392/155594, date = 31-Dec-2380
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 32, stepsize 365.25 days, at day 130757/155594, date = 01-Jan-2382
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 33, stepsize 365.25 days, at day 131122/155594, date = 01-Jan-2383
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 34, stepsize 365.25 days, at day 131488/155594, date = 01-Jan-2384
+ Newton its= 2, linearizations= 3 (0.1sec), linear its=  6 (0.1sec)
+
+Starting time step 35, stepsize 365.25 days, at day 131853/155594, date = 31-Dec-2384
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 36, stepsize 365.25 days, at day 132218/155594, date = 01-Jan-2386
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 37, stepsize 365.25 days, at day 132583/155594, date = 01-Jan-2387
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 38, stepsize 365.25 days, at day 132948/155594, date = 01-Jan-2388
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 39, stepsize 365.25 days, at day 133314/155594, date = 31-Dec-2388
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 40, stepsize 365.25 days, at day 133679/155594, date = 01-Jan-2390
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 41, stepsize 365.25 days, at day 134044/155594, date = 01-Jan-2391
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.3sec)
+
+Starting time step 42, stepsize 365.25 days, at day 134410/155594, date = 01-Jan-2392
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 43, stepsize 365.25 days, at day 134775/155594, date = 31-Dec-2392
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 44, stepsize 365.25 days, at day 135140/155594, date = 01-Jan-2394
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.0sec)
+
+Starting time step 45, stepsize 365.25 days, at day 135505/155594, date = 01-Jan-2395
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 46, stepsize 365.25 days, at day 135870/155594, date = 01-Jan-2396
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 47, stepsize 365.25 days, at day 136236/155594, date = 31-Dec-2396
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 48, stepsize 365.25 days, at day 136601/155594, date = 01-Jan-2398
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 49, stepsize 365.25 days, at day 136966/155594, date = 01-Jan-2399
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 50, stepsize 365.25 days, at day 137332/155594, date = 01-Jan-2400
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 51, stepsize 365.25 days, at day 137697/155594, date = 31-Dec-2400
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 52, stepsize 365.25 days, at day 138062/155594, date = 01-Jan-2402
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 53, stepsize 365.25 days, at day 138427/155594, date = 01-Jan-2403
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 54, stepsize 365.25 days, at day 138792/155594, date = 01-Jan-2404
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 55, stepsize 365.25 days, at day 139158/155594, date = 31-Dec-2404
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 56, stepsize 365.25 days, at day 139523/155594, date = 01-Jan-2406
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 57, stepsize 365.25 days, at day 139888/155594, date = 01-Jan-2407
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 58, stepsize 365.25 days, at day 140254/155594, date = 01-Jan-2408
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 59, stepsize 365.25 days, at day 140619/155594, date = 31-Dec-2408
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.2sec)
+
+Starting time step 60, stepsize 365.25 days, at day 140984/155594, date = 01-Jan-2410
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 61, stepsize 365.25 days, at day 141349/155594, date = 01-Jan-2411
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 62, stepsize 365.25 days, at day 141714/155594, date = 01-Jan-2412
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 63, stepsize 365.25 days, at day 142080/155594, date = 31-Dec-2412
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.2sec)
+
+Starting time step 64, stepsize 365.25 days, at day 142445/155594, date = 01-Jan-2414
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 65, stepsize 365.25 days, at day 142810/155594, date = 01-Jan-2415
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 66, stepsize 365.25 days, at day 143176/155594, date = 01-Jan-2416
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 67, stepsize 365.25 days, at day 143541/155594, date = 31-Dec-2416
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 68, stepsize 365.25 days, at day 143906/155594, date = 01-Jan-2418
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 69, stepsize 365.25 days, at day 144271/155594, date = 01-Jan-2419
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 70, stepsize 365.25 days, at day 144636/155594, date = 01-Jan-2420
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 71, stepsize 365.25 days, at day 145002/155594, date = 31-Dec-2420
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 72, stepsize 365.25 days, at day 145367/155594, date = 01-Jan-2422
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 73, stepsize 365.25 days, at day 145732/155594, date = 01-Jan-2423
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 74, stepsize 365.25 days, at day 146098/155594, date = 01-Jan-2424
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 75, stepsize 365.25 days, at day 146463/155594, date = 31-Dec-2424
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 76, stepsize 365.25 days, at day 146828/155594, date = 01-Jan-2426
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 77, stepsize 365.25 days, at day 147193/155594, date = 01-Jan-2427
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 78, stepsize 365.25 days, at day 147558/155594, date = 01-Jan-2428
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 79, stepsize 365.25 days, at day 147924/155594, date = 31-Dec-2428
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.2sec)
+
+Starting time step 80, stepsize 365.25 days, at day 148289/155594, date = 01-Jan-2430
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 81, stepsize 365.25 days, at day 148654/155594, date = 01-Jan-2431
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 82, stepsize 365.25 days, at day 149020/155594, date = 01-Jan-2432
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 83, stepsize 365.25 days, at day 149385/155594, date = 31-Dec-2432
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.2sec)
+
+Starting time step 84, stepsize 365.25 days, at day 149750/155594, date = 01-Jan-2434
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 85, stepsize 365.25 days, at day 150115/155594, date = 01-Jan-2435
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 86, stepsize 365.25 days, at day 150480/155594, date = 01-Jan-2436
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 87, stepsize 365.25 days, at day 150846/155594, date = 31-Dec-2436
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 88, stepsize 365.25 days, at day 151211/155594, date = 01-Jan-2438
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 89, stepsize 365.25 days, at day 151576/155594, date = 01-Jan-2439
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 90, stepsize 365.25 days, at day 151942/155594, date = 01-Jan-2440
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 91, stepsize 365.25 days, at day 152307/155594, date = 31-Dec-2440
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 92, stepsize 365.25 days, at day 152672/155594, date = 01-Jan-2442
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 93, stepsize 365.25 days, at day 153037/155594, date = 01-Jan-2443
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.2sec)
+
+Starting time step 94, stepsize 365.25 days, at day 153402/155594, date = 01-Jan-2444
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 95, stepsize 365.25 days, at day 153768/155594, date = 31-Dec-2444
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 96, stepsize 365.25 days, at day 154133/155594, date = 01-Jan-2446
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 97, stepsize 365.25 days, at day 154498/155594, date = 01-Jan-2447
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 98, stepsize 365.25 days, at day 154864/155594, date = 01-Jan-2448
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 99, stepsize 365.25 days, at day 155229/155594, date = 31-Dec-2448
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+
+Report step 67/68 at day 155594/192118, date = 01-Jan-2450
+
+Starting time step 0, stepsize 365.25 days, at day 155594/192118, date = 01-Jan-2450
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.1sec)
+Restart file written for report step 67/68, date = 01-Jan-2450 00:00:00
+
+Starting time step 1, stepsize 365.25 days, at day 155959/192118, date = 01-Jan-2451
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 2, stepsize 365.25 days, at day 156324/192118, date = 01-Jan-2452
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 3, stepsize 365.25 days, at day 156690/192118, date = 31-Dec-2452
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 4, stepsize 365.25 days, at day 157055/192118, date = 01-Jan-2454
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.2sec)
+
+Starting time step 5, stepsize 365.25 days, at day 157420/192118, date = 01-Jan-2455
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 6, stepsize 365.25 days, at day 157786/192118, date = 01-Jan-2456
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 7, stepsize 365.25 days, at day 158151/192118, date = 31-Dec-2456
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 8, stepsize 365.25 days, at day 158516/192118, date = 01-Jan-2458
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 9, stepsize 365.25 days, at day 158881/192118, date = 01-Jan-2459
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 10, stepsize 365.25 days, at day 159246/192118, date = 01-Jan-2460
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 11, stepsize 365.25 days, at day 159612/192118, date = 31-Dec-2460
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 12, stepsize 365.25 days, at day 159977/192118, date = 01-Jan-2462
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 13, stepsize 365.25 days, at day 160342/192118, date = 01-Jan-2463
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 14, stepsize 365.25 days, at day 160708/192118, date = 01-Jan-2464
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 15, stepsize 365.25 days, at day 161073/192118, date = 31-Dec-2464
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 16, stepsize 365.25 days, at day 161438/192118, date = 01-Jan-2466
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 17, stepsize 365.25 days, at day 161803/192118, date = 01-Jan-2467
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 18, stepsize 365.25 days, at day 162168/192118, date = 01-Jan-2468
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 19, stepsize 365.25 days, at day 162534/192118, date = 31-Dec-2468
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 20, stepsize 365.25 days, at day 162899/192118, date = 01-Jan-2470
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 21, stepsize 365.25 days, at day 163264/192118, date = 01-Jan-2471
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 22, stepsize 365.25 days, at day 163630/192118, date = 01-Jan-2472
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 23, stepsize 365.25 days, at day 163995/192118, date = 31-Dec-2472
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 24, stepsize 365.25 days, at day 164360/192118, date = 01-Jan-2474
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.4sec)
+
+Starting time step 25, stepsize 365.25 days, at day 164725/192118, date = 01-Jan-2475
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 26, stepsize 365.25 days, at day 165090/192118, date = 01-Jan-2476
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 27, stepsize 365.25 days, at day 165456/192118, date = 31-Dec-2476
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 28, stepsize 365.25 days, at day 165821/192118, date = 01-Jan-2478
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 29, stepsize 365.25 days, at day 166186/192118, date = 01-Jan-2479
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 30, stepsize 365.25 days, at day 166552/192118, date = 01-Jan-2480
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 31, stepsize 365.25 days, at day 166917/192118, date = 31-Dec-2480
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 32, stepsize 365.25 days, at day 167282/192118, date = 01-Jan-2482
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 33, stepsize 365.25 days, at day 167647/192118, date = 01-Jan-2483
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 34, stepsize 365.25 days, at day 168012/192118, date = 01-Jan-2484
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 35, stepsize 365.25 days, at day 168378/192118, date = 31-Dec-2484
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 36, stepsize 365.25 days, at day 168743/192118, date = 01-Jan-2486
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 37, stepsize 365.25 days, at day 169108/192118, date = 01-Jan-2487
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 38, stepsize 365.25 days, at day 169474/192118, date = 01-Jan-2488
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 39, stepsize 365.25 days, at day 169839/192118, date = 31-Dec-2488
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 40, stepsize 365.25 days, at day 170204/192118, date = 01-Jan-2490
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 41, stepsize 365.25 days, at day 170569/192118, date = 01-Jan-2491
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 42, stepsize 365.25 days, at day 170934/192118, date = 01-Jan-2492
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 43, stepsize 365.25 days, at day 171300/192118, date = 31-Dec-2492
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 44, stepsize 365.25 days, at day 171665/192118, date = 01-Jan-2494
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.3sec)
+
+Starting time step 45, stepsize 365.25 days, at day 172030/192118, date = 01-Jan-2495
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 46, stepsize 365.25 days, at day 172396/192118, date = 01-Jan-2496
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 47, stepsize 365.25 days, at day 172761/192118, date = 31-Dec-2496
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 48, stepsize 365.25 days, at day 173126/192118, date = 01-Jan-2498
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 49, stepsize 365.25 days, at day 173491/192118, date = 01-Jan-2499
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 50, stepsize 365.25 days, at day 173856/192118, date = 01-Jan-2500
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 51, stepsize 365.25 days, at day 174222/192118, date = 01-Jan-2501
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 52, stepsize 365.25 days, at day 174587/192118, date = 02-Jan-2502
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 53, stepsize 365.25 days, at day 174952/192118, date = 02-Jan-2503
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 54, stepsize 365.25 days, at day 175318/192118, date = 02-Jan-2504
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 55, stepsize 365.25 days, at day 175683/192118, date = 01-Jan-2505
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 56, stepsize 365.25 days, at day 176048/192118, date = 02-Jan-2506
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 57, stepsize 365.25 days, at day 176413/192118, date = 02-Jan-2507
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 58, stepsize 365.25 days, at day 176778/192118, date = 02-Jan-2508
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 59, stepsize 365.25 days, at day 177144/192118, date = 01-Jan-2509
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 60, stepsize 365.25 days, at day 177509/192118, date = 02-Jan-2510
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 61, stepsize 365.25 days, at day 177874/192118, date = 02-Jan-2511
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 62, stepsize 365.25 days, at day 178240/192118, date = 02-Jan-2512
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  3 (0.1sec)
+
+Starting time step 63, stepsize 365.25 days, at day 178605/192118, date = 01-Jan-2513
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 64, stepsize 365.25 days, at day 178970/192118, date = 02-Jan-2514
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 65, stepsize 365.25 days, at day 179335/192118, date = 02-Jan-2515
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 66, stepsize 365.25 days, at day 179700/192118, date = 02-Jan-2516
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 67, stepsize 365.25 days, at day 180066/192118, date = 01-Jan-2517
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.2sec)
+
+Starting time step 68, stepsize 365.25 days, at day 180431/192118, date = 02-Jan-2518
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 69, stepsize 365.25 days, at day 180796/192118, date = 02-Jan-2519
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 70, stepsize 365.25 days, at day 181162/192118, date = 02-Jan-2520
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.2sec)
+
+Starting time step 71, stepsize 365.25 days, at day 181527/192118, date = 01-Jan-2521
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 72, stepsize 365.25 days, at day 181892/192118, date = 02-Jan-2522
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 73, stepsize 365.25 days, at day 182257/192118, date = 02-Jan-2523
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 74, stepsize 365.25 days, at day 182622/192118, date = 02-Jan-2524
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 75, stepsize 365.25 days, at day 182988/192118, date = 01-Jan-2525
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 76, stepsize 365.25 days, at day 183353/192118, date = 02-Jan-2526
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 77, stepsize 365.25 days, at day 183718/192118, date = 02-Jan-2527
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 78, stepsize 365.25 days, at day 184084/192118, date = 02-Jan-2528
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 79, stepsize 365.25 days, at day 184449/192118, date = 01-Jan-2529
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 80, stepsize 365.25 days, at day 184814/192118, date = 02-Jan-2530
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 81, stepsize 365.25 days, at day 185179/192118, date = 02-Jan-2531
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 82, stepsize 365.25 days, at day 185544/192118, date = 02-Jan-2532
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 83, stepsize 365.25 days, at day 185910/192118, date = 01-Jan-2533
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 84, stepsize 365.25 days, at day 186275/192118, date = 02-Jan-2534
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 85, stepsize 365.25 days, at day 186640/192118, date = 02-Jan-2535
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 86, stepsize 365.25 days, at day 187006/192118, date = 02-Jan-2536
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 87, stepsize 365.25 days, at day 187371/192118, date = 01-Jan-2537
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  7 (0.1sec)
+
+Starting time step 88, stepsize 365.25 days, at day 187736/192118, date = 02-Jan-2538
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.3sec)
+
+Starting time step 89, stepsize 365.25 days, at day 188101/192118, date = 02-Jan-2539
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 90, stepsize 365.25 days, at day 188466/192118, date = 02-Jan-2540
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 91, stepsize 365.25 days, at day 188832/192118, date = 01-Jan-2541
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  5 (0.1sec)
+
+Starting time step 92, stepsize 365.25 days, at day 189197/192118, date = 02-Jan-2542
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 93, stepsize 365.25 days, at day 189562/192118, date = 02-Jan-2543
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 94, stepsize 365.25 days, at day 189928/192118, date = 02-Jan-2544
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.0sec)
+
+Starting time step 95, stepsize 365.25 days, at day 190293/192118, date = 01-Jan-2545
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 96, stepsize 365.25 days, at day 190658/192118, date = 02-Jan-2546
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  4 (0.1sec)
+
+Starting time step 97, stepsize 365.25 days, at day 191023/192118, date = 02-Jan-2547
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Starting time step 98, stepsize 365.25 days, at day 191388/192118, date = 02-Jan-2548
+ Newton its= 2, linearizations= 3 (0.0sec), linear its=  6 (0.1sec)
+
+Starting time step 99, stepsize 364.25 days, at day 191754/192118, date = 01-Jan-2549
+ Newton its= 1, linearizations= 2 (0.0sec), linear its=  2 (0.1sec)
+
+Restart file written for report step 68/68, date = 01-Jan-2550 00:00:00
+
+
+================    End of simulation     ===============
+
+Number of MPI processes:        16
+Threads per MPI process:         2
+Setup time:                     55.60 s
+  Deck input:                   26.90 s
+Number of timesteps:           571
+Simulation time:               152.91 s
+  Assembly time:                17.20 s (Wasted: 0.1 s; 0.7%)
+    Well assembly:               0.22 s (Wasted: 0.0 s; 0.0%)
+  Linear solve time:            63.41 s (Wasted: 0.7 s; 1.1%)
+    Linear setup:               28.03 s (Wasted: 0.3 s; 1.0%)
+  Props/update time:            36.85 s (Wasted: 0.4 s; 1.1%)
+  Pre/post step:                10.22 s (Wasted: 0.0 s; 0.0%)
+  Output write time:            22.66 s
+Overall Linearizations:       1547      (Wasted:    13; 0.8%)
+Overall Newton Iterations:     977      (Wasted:    13; 1.3%)
+Overall Linear Iterations:    2441      (Wasted:    32; 1.3%)
+
+
+
+Error summary:
+Warnings          278
+Info              1415
+Errors            0
+Bugs              0
+Debug             0
+Problems          1

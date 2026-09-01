@@ -1,0 +1,5 @@
+OPM Flow Reservoir Simulator: placeholder.
+Install:
+https://opm-project.org/?page_id=36
+with opm-common at commit e12c23091c322db1fd81b2966ce44c38186463b1 or later:
+https://github.com/OPM/opm-common/pull/4923

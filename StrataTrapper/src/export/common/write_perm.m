@@ -1,0 +1,15 @@
+function write_perm(prefix,G,perm,idx,default_perm)
+perm_mD = perm / milli / darcy;
+perm_mapping = zeros(prod(G.cartDims),3);
+if ~isempty(default_perm)
+    default_perm_mD = default_perm / milli / darcy;
+    perm_mapping(:,:) = default_perm_mD;
+end
+perm_mapping(G.cells.indexMap(idx),:) = perm_mD;
+keywords = ["PERMX","PERMY","PERMZ"];
+for keyword_num = 1:length(keywords)
+    keyword = keywords(keyword_num);
+    file_name = join([prefix,keyword,".inc"],'');
+    write_keyword(file_name,keyword,perm_mapping(:,keyword_num),0,0);
+end
+end

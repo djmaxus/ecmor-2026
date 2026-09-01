@@ -1,0 +1,68 @@
+WCONINJE
+-- open wells
+/
+
+-- run with --enable-tuning=1
+TUNING
+* 10.0 /
+/
+/
+
+TSTEP
+1 2 5 10
+/
+
+TSTEP
+33*10
+/
+
+TUNING
+* 366.0 /
+/
+/
+
+DATES
+1 JAN 2025 /
+1 JAN 2026 /
+1 JAN 2027 /
+1 JAN 2028 /
+1 JAN 2029 /
+1 JAN 2030 /
+1 JAN 2031 /
+1 JAN 2032 /
+1 JAN 2033 /
+1 JAN 2034 /
+1 JAN 2035 /
+1 JAN 2036 /
+1 JAN 2037 /
+1 JAN 2038 /
+1 JAN 2039 /
+1 JAN 2040 /
+1 JAN 2041 /
+1 JAN 2042 /
+1 JAN 2043 /
+1 JAN 2044 /
+1 JAN 2045 /
+1 JAN 2046 /
+1 JAN 2047 /
+1 JAN 2048 /
+1 JAN 2049 /
+/
+
+WCONINJE
+-- shut wells
+/
+
+TUNING
+* 365.25 /
+/
+/
+
+DATES
+1 JAN 2050 /
+1 JAN 2150 /
+1 JAN 2250 /
+1 JAN 2350 /
+1 JAN 2450 /
+1 JAN 2550 /
+/

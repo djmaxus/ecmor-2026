@@ -1,0 +1,8 @@
+{
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/citation-file-format/citation-file-format/main/schema.json": [
+            "CITATION.cff"
+        ]
+    },
+    "editor.formatOnSave": false
+}

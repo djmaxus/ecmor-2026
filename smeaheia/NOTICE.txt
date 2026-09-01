@@ -1,0 +1,3 @@
+We give credit to Equinor and Gassnova for the Smeaheia Dataset.
+The Smeaheia Dataset License is available at:
+https://co2datashare.org/view/license/26af9426-203f-4993-9d41-2e1bf191ceaf
