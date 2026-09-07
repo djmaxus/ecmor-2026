@@ -6,6 +6,8 @@ by Max Elizarev et al.
 
 **StrataTrapper**: <https://github.com/ImperialCollegeLondon/StrataTrapper>
 
+[![DOI](https://zenodo.org/badge/1271403712.svg)](https://doi.org/10.5281/zenodo.22648748)
+
 [![poster](poster/poster.svg)](poster/poster.pdf)
 
 - [Troll Aquifer model availability](#troll-aquifer-model-availability)

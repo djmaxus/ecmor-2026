@@ -11,6 +11,7 @@ authors:
     alias: djmaxus
     orcid: "https://orcid.org/0000-0002-5279-2877"
     website: "https://djmaxus.dev"
+doi: 10.5281/zenodo.22648748
 preferred-citation:
   authors:
     - *djmaxus
